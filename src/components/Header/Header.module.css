@@ -1,0 +1,64 @@
+.header {
+  outline: 1px solid red;
+  outline-offset: -2px;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--badges);
+  padding: 0 16px;
+
+  background-color: var(--header-color);
+
+  @media (min-width: 768px) {
+    padding: 0 32px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 64px;
+  }
+}
+
+.logoLink {
+  margin-right: auto;
+  padding: 28px 0;
+
+  @media (min-width: 768px) {
+    margin-right: 152px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 450px;
+  }
+}
+
+.logo {
+  width: 136px;
+  height: 16px;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    gap: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 32px;
+  }
+}
+
+.link {
+  padding: 24px 0;
+}
+
+.active {
+  color: var(--button-hover);
+}

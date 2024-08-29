@@ -1,0 +1,104 @@
+/* local fonts */
+@import url(./fonts.css);
+
+/* Box model */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  font-family: inherit;
+  display: block;
+}
+
+button {
+  display: block;
+  padding: 0;
+
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+/* Variables*/
+
+:root {
+  /* Color */
+
+  --white: #fff;
+  --header-color: #f7f7f7;
+  --badges: #f2f4f7;
+  --color3: #dadde1;
+  --color4: #ffc531;
+  --button-hover: #d84343;
+  --color6: #e44848;
+  --color7: #6c717b;
+  --color8: #475467;
+  --main: #101828;
+
+  --dark: #2f2f2f;
+
+  /* Transition*/
+  --transition-delay: 250ms;
+  --transition: cubic-bezier(0.14, 0.57, 0.97, 0.39);
+}
+
+input:-webkit-autofill {
+  /* Стили для автозаполненных полей */
+  /* -webkit-box-shadow: 0 0 0px 1000px #f0eff4 inset;
+  box-shadow: 0 0 0px 1000px #f0eff4 inset; */
+}
+/* ------------BASE STYLES------------ */
+
+body {
+  font-family: 'Inter';
+  color: var(--main);
+  /* fill: var(--dark); */
+  /* stroke: var(--dark); */
+
+  user-select: none;
+}
+
+svg {
+  display: block;
+}
