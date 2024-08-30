@@ -9,7 +9,7 @@ import './App.css';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
 const CamperDetailsPage = lazy(() =>
-  import('./pages/CamparDetailsPage/CamparDetailsPage')
+  import('./pages/CamperDetailsPage/CamperDetailsPage')
 );
 
 const App = () => {
