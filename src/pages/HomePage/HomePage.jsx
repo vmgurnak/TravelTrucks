@@ -5,9 +5,13 @@ import css from './HomePage.module.css';
 const HomePage = () => {
   return (
     <section className={css.homePage}>
-      <h1>Campers of your dreams</h1>
-      <p>You can find everything you want in our catalog</p>
-      <Link to="/catalog">View Now</Link>
+      <h1 className={css.title}>Campers of your dreams</h1>
+      <p className={css.text}>
+        You can find everything you want in our catalog
+      </p>
+      <Link className={css.link} to="/catalog">
+        View Now
+      </Link>
     </section>
   );
 };

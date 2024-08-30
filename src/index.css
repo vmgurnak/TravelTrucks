@@ -66,12 +66,12 @@ img {
   /* Color */
 
   --white: #fff;
-  --header-color: #f7f7f7;
+  --light-grey: #f7f7f7;
   --badges: #f2f4f7;
   --color3: #dadde1;
   --color4: #ffc531;
-  --button-hover: #d84343;
-  --color6: #e44848;
+  --dark-red: #d84343;
+  --red: #e44848;
   --color7: #6c717b;
   --color8: #475467;
   --main: #101828;
