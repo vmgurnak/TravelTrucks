@@ -1,6 +1,4 @@
 .homePage {
-  width: 375px;
-  height: 600px;
   padding: 100px 16px 160px 16px;
 
   background-color: rgba(0, 0, 0, 0.2);
@@ -18,15 +16,10 @@
   }
 
   @media (min-width: 768px) {
-    width: 768px;
-    height: 371px;
     padding: 90px 32px 90px 32px;
   }
 
   @media (min-width: 1440px) {
-    width: 1440px;
-    height: 696px;
-
     padding: 260px 64px;
   }
 }

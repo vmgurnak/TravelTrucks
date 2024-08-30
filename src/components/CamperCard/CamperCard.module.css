@@ -1,0 +1,92 @@
+.container {
+  width: 888px;
+  height: 368px;
+  padding: 24px;
+
+  display: flex;
+  gap: 24px;
+
+  border: 1px solid var(--dark-gray);
+  border-radius: 20px;
+}
+
+.imgContainer {
+  width: 292px;
+  height: 320px;
+  flex-shrink: 0;
+
+  border: 1px solid var(--dark-gray);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 75%;
+}
+
+.info {
+  width: 100%;
+}
+
+.contWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.name {
+  margin-right: auto;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.price {
+  margin-right: 12px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btnFavorite {
+}
+
+.favorite {
+  width: 26px;
+  height: 24px;
+}
+
+.ratingWrap {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.rating {
+  line-height: 1.5;
+  margin-right: 4px;
+}
+
+.review {
+  line-height: 1.5;
+  margin-right: 16px;
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.location {
+  line-height: 1.5;
+}

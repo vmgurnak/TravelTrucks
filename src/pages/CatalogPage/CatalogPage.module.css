@@ -1,0 +1,9 @@
+.catalogPage {
+  outline: 1px solid red;
+  outline-offset: -2px;
+
+  display: flex;
+  gap: 64px;
+
+  padding: 48px 64px 52px 48px;
+}

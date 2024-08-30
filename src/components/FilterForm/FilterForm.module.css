@@ -1,0 +1,7 @@
+.filterForm {
+  outline: 1px solid red;
+  outline-offset: -2px;
+
+  width: 360px;
+  height: 752px;
+}

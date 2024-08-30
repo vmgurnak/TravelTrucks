@@ -6,7 +6,7 @@ export const ICONS = {
   biGrid: `${icons}#bi-grid`,
   biGrid1x2: `${icons}#bi-grid-1x2`,
   biGrid3x3: `${icons}#bi-grid-3x3`,
-  cuphot: `${icons}#cup-hot`,
+  cupHot: `${icons}#cup-hot`,
   diagram: `${icons}#diagram`,
   heart: `${icons}#heart`,
   heartPressed: `${icons}#heart-pressed`,
