@@ -140,3 +140,8 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
+
+.linkCamperdetails:hover,
+.linkCamperdetails:focus {
+  background-color: var(--dark-red);
+}

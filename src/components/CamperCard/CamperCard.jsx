@@ -99,33 +99,24 @@ export default CamperCard;
 // "tank": "208l",
 // "consumption": "30l/100km",
 
-// "transmission": "automatic",
-// "engine": "diesel",
-// "kitchen": false,
-// "AC": true,
-
-// "bathroom": true,
-// "TV": true,
-
-// "refrigerator": false,
-
-// "radio": true,
-// "microwave": true,
-// "gas": false,
-// "water": true,
+// "refrigerator": true,false
+// "radio": true,false
+// "microwave": true,false
+// "gas": true,false
+// "water": true,false
 
 // Filters
 // "location": "Ukraine, Kyiv",
 
 // Vehicle equipment
-// "AC": true,
-// "transmission": "automatic",
-// "kitchen": false,
-// "TV": true,
-// "bathroom": true,
+// "AC": true,false
+// "transmission": "automatic", "manual",
+// "kitchen": true,false
+// "TV": true,false
+// "bathroom": true,false
 
-// "engine": "diesel",
+// "engine": "diesel", "petrol", "hybrid"
 
 // Vehicle type
 // "form": "alcove", Fully Integrated, Van
-// 'panelTruck'; fullyIntegrated, alcove
+// "form": alcove, fullyIntegrated, 'panelTruck'
