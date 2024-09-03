@@ -4,6 +4,9 @@
 
   width: 888px;
   height: 1664px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .item {

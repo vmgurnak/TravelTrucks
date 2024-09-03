@@ -1,21 +1,22 @@
 import { Link } from 'react-router-dom';
 import { ICONS } from '../Constants/constants';
+
 import css from './CamperCard.module.css';
 
-const CamperCard = () => {
+const CamperCard = ({ camper }) => {
   return (
     <div className={css.container}>
       <div className={css.imgContainer}>
         <img
           className={css.img}
-          src="https://ftp.goit.study/img/campers-test-task/1-1.webp"
-          alt="camper"
+          src={camper.gallery[0].thumb}
+          alt={camper.name}
         />
       </div>
       <div className={css.info}>
         <div className={css.contWrap}>
-          <h3 className={css.name}>Road Bear C 23-25</h3>
-          <p className={css.price}>10000.00</p>
+          <h3 className={css.name}>{camper.name}</h3>
+          <p className={css.price}>{camper.price}</p>
           <button className={css.btnFavorite} type="button">
             <svg className={css.favorite}>
               <use href={ICONS.heart}></use>
@@ -26,62 +27,59 @@ const CamperCard = () => {
           <svg className={css.star}>
             <use href={ICONS.star}></use>
           </svg>
-          <div className={css.rating}>4.4</div>
-          <div className={css.review}>(3 Reviews)</div>
+          <div className={css.rating}>{camper.rating}</div>
+          <div className={css.review}>({camper.reviews.length} Reviews)</div>
           <svg className={css.locationIcon}>
             <use href={ICONS.location}></use>
           </svg>
-          <div className={css.location}>Kyiv, Ukraine</div>
+          <div className={css.location}>{camper.location}</div>
         </div>
-        <p className={css.description}>
-          Embadventures, promising comfort, style, and the freedom to explore at
-          your own pace.
-        </p>
+        <p className={css.description}>{camper.description}</p>
         <ul className={css.equipmentList}>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.transmission}></use>
             </svg>
-            <p className={css.equipmentText}>Automatic</p>
+            <p className={css.equipmentText}>{camper.transmission}</p>
           </li>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.engine}></use>
             </svg>
-            <p className={css.equipmentText}>Petrol</p>
+            <p className={css.equipmentText}>{camper.engine}</p>
           </li>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.kitchen}></use>
             </svg>
-            <p className={css.equipmentText}>Kitchen</p>
+            <p className={css.equipmentText}>{camper.kitchen}</p>
           </li>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.ac}></use>
             </svg>
-            <p className={css.equipmentText}>AC</p>
+            <p className={css.equipmentText}>{camper.ac}</p>
           </li>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.bathroom}></use>
             </svg>
-            <p className={css.equipmentText}>Bathroom</p>
+            <p className={css.equipmentText}>{camper.bathroom}</p>
           </li>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.tv}></use>
             </svg>
-            <p className={css.equipmentText}>TV</p>
+            <p className={css.equipmentText}>{camper.tv}</p>
           </li>
           <li className={css.equipmentItem}>
             <svg className={css.equipmentIcon}>
               <use href={ICONS.radio}></use>
             </svg>
-            <p className={css.equipmentText}>Radio</p>
+            <p className={css.equipmentText}>{camper.radio}</p>
           </li>
         </ul>
-        <Link to="catalog/323" className={css.linkCamperdetails}>
+        <Link to={camper.id} className={css.linkCamperdetails}>
           Show more
         </Link>
       </div>
