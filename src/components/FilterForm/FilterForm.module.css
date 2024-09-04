@@ -94,12 +94,12 @@
   height: 96px;
 }
 
-/* .filterLabel:focus-within {
-  border: 1px solid var(--red);
-} */
+.filterInput:checked + .filterLabel {
+  border-color: var(--red);
+}
 
-.filterChecked {
-  border: 1px solid var(--red);
+.filterItem {
+  position: relative;
 }
 
 .filterInput {
@@ -134,6 +134,8 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: var(--white);
+
+  transition: background-color var(--transition-delay) var(--transition);
 }
 
 .btnSearch:hover,

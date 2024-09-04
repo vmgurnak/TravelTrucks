@@ -17,18 +17,6 @@ const CampersList = () => {
             <CamperCard camper={camper} />
           </li>
         ))}
-        {/* <li className={css.item}>
-          <CamperCard />
-        </li>
-        <li className={css.item}>
-          <CamperCard />
-        </li>
-        <li className={css.item}>
-          <CamperCard />
-        </li>
-        <li className={css.item}>
-          <CamperCard />
-        </li> */}
       </ul>
 
       <button className={css.btnLoadMore} type="button">

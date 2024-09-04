@@ -27,11 +27,6 @@ const FilterFormSchema = Yup.object().shape({
 
 const FilterForm = () => {
   const [isFocus, setIsFocus] = useState(false);
-  // const [isCheckedAC, setIsCheckedAC] = useState(false);
-  // const [isCheckedTransmission, setIsCheckedTransmission] = useState(false);
-  // const [isCheckedKitchen, setIsCheckedKitchen] = useState(false);
-  // const [isCheckedTv, setIsCheckedTv] = useState(false);
-  // const [isCheckedBathroom, setIsCheckedBathroom] = useState(false);
 
   const handleFocus = () => {
     setIsFocus(true);
@@ -70,96 +65,131 @@ const FilterForm = () => {
           </label>
           <p className={css.filterHeadline}>Filters</p>
           <h3 className={css.filterTitle}>Vehicle equipment</h3>
-          <div className={clsx(css.filterWrapper, css.checkboxWrapper)}>
-            <label className={clsx(css.filterLabel)}>
-              <Field className={css.filterInput} type="checkbox" name="AC" />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.ac}></use>
-              </svg>
-              <span className={css.filterText}>AC</span>
-            </label>
-            <label className={clsx(css.filterLabel)}>
+          <ul className={clsx(css.filterWrapper, css.checkboxWrapper)}>
+            <li className={css.filterItem}>
+              <Field
+                className={css.filterInput}
+                type="checkbox"
+                name="AC"
+                id="AC"
+              />
+              <label className={clsx(css.filterLabel)} htmlFor="AC">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.ac}></use>
+                </svg>
+                <span className={css.filterText}>AC</span>
+              </label>
+            </li>
+            <li className={css.filterItem}>
               <Field
                 className={css.filterInput}
                 type="checkbox"
                 name="transmission"
                 value="automatic"
+                id="automatic"
               />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.transmission}></use>
-              </svg>
-              <span className={css.filterText}>Automatic</span>
-            </label>
-            <label className={clsx(css.filterLabel)}>
+              <label className={clsx(css.filterLabel)} htmlFor="automatic">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.transmission}></use>
+                </svg>
+                <span className={css.filterText}>Automatic</span>
+              </label>
+            </li>
+            <li className={css.filterItem}>
               <Field
                 className={css.filterInput}
                 type="checkbox"
                 name="kitchen"
+                id="kitchen"
               />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.kitchen}></use>
-              </svg>
-              <span className={css.filterText}>Kitchen</span>
-            </label>
-            <label className={clsx(css.filterLabel)}>
-              <Field className={css.filterInput} type="checkbox" name="tv" />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.tv}></use>
-              </svg>
-              <span className={css.filterText}>TV</span>
-            </label>
-            <label className={clsx(css.filterLabel)}>
+              <label className={clsx(css.filterLabel)} htmlFor="kitchen">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.kitchen}></use>
+                </svg>
+                <span className={css.filterText}>Kitchen</span>
+              </label>
+            </li>
+            <li className={css.filterItem}>
+              <Field
+                className={css.filterInput}
+                type="checkbox"
+                name="tv"
+                id="tv"
+              />
+              <label className={clsx(css.filterLabel)} htmlFor="tv">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.tv}></use>
+                </svg>
+                <span className={css.filterText}>TV</span>
+              </label>
+            </li>
+            <li className={css.filterItem}>
               <Field
                 className={css.filterInput}
                 type="checkbox"
                 name="bathroom"
+                id="bathroom"
               />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.bathroom}></use>
-              </svg>
-              <span className={css.filterText}>Bathroom</span>
-            </label>
-          </div>
+              <label className={clsx(css.filterLabel)} htmlFor="bathroom">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.bathroom}></use>
+                </svg>
+                <span className={css.filterText}>Bathroom</span>
+              </label>
+            </li>
+          </ul>
 
           <h3 className={css.filterTitle}>Vehicle type</h3>
-          <div className={clsx(css.filterWrapper, css.radioWrapper)}>
-            <label className={clsx(css.filterLabel)}>
+          <ul className={clsx(css.filterWrapper, css.radioWrapper)}>
+            <li className={css.filterItem}>
               <Field
                 className={css.filterInput}
                 type="radio"
                 name="form"
                 value="panelTruck"
+                id="panelTruck"
               />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.formVan}></use>
-              </svg>
-              <span className={css.filterText}>Van</span>
-            </label>
-            <label className={clsx(css.filterLabel)}>
+              <label className={clsx(css.filterLabel)} htmlFor="panelTruck">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.formVan}></use>
+                </svg>
+                <span className={css.filterText}>Van</span>
+              </label>
+            </li>
+            <li className={css.filterItem}>
               <Field
                 className={css.filterInput}
                 type="radio"
                 name="form"
                 value="fullyIntegrated"
+                id="fullyIntegrated"
               />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.formFullyIntegrated}></use>
-              </svg>
-              <span className={css.filterText}>Fully Integrated</span>
-            </label>
-            <label className={clsx(css.filterLabel)}>
+              <label
+                className={clsx(css.filterLabel)}
+                htmlFor="fullyIntegrated"
+              >
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.formFullyIntegrated}></use>
+                </svg>
+                <span className={css.filterText}>Fully Integrated</span>
+              </label>
+            </li>
+            <li className={css.filterItem}>
               <Field
                 className={css.filterInput}
                 type="radio"
                 name="form"
                 value="alcove"
+                id="alcove"
               />
-              <svg className={css.filterIcon}>
-                <use href={ICONS.formAlcove}></use>
-              </svg>
-              <span className={css.filterText}>Alcove</span>
-            </label>
-          </div>
+              <label className={clsx(css.filterLabel)} htmlFor="alcove">
+                <svg className={css.filterIcon}>
+                  <use href={ICONS.formAlcove}></use>
+                </svg>
+                <span className={css.filterText}>Alcove</span>
+              </label>
+            </li>
+          </ul>
 
           <button type="submit" className={css.btnSearch}>
             Search
