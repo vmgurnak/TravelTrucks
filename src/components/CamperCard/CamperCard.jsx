@@ -3,6 +3,12 @@ import { ICONS } from '../Constants/constants';
 
 import css from './CamperCard.module.css';
 
+const toEuro = new Intl.NumberFormat('en-EU', {
+  style: 'currency',
+  currency: 'EUR',
+  useGrouping: false,
+});
+
 const CamperCard = ({ camper }) => {
   return (
     <div className={css.container}>
@@ -16,7 +22,7 @@ const CamperCard = ({ camper }) => {
       <div className={css.info}>
         <div className={css.contWrap}>
           <h3 className={css.name}>{camper.name}</h3>
-          <p className={css.price}>{camper.price}</p>
+          <p className={css.price}>{toEuro.format(camper.price)}</p>
           <button className={css.btnFavorite} type="button">
             <svg className={css.favorite}>
               <use href={ICONS.heart}></use>
@@ -27,8 +33,9 @@ const CamperCard = ({ camper }) => {
           <svg className={css.star}>
             <use href={ICONS.star}></use>
           </svg>
-          <div className={css.rating}>{camper.rating}</div>
-          <div className={css.review}>({camper.reviews.length} Reviews)</div>
+          <p className={css.ratingReview}>
+            {camper.rating}({camper.reviews.length} Reviews)
+          </p>
           <svg className={css.locationIcon}>
             <use href={ICONS.location}></use>
           </svg>
@@ -48,36 +55,46 @@ const CamperCard = ({ camper }) => {
             </svg>
             <p className={css.equipmentText}>{camper.engine}</p>
           </li>
-          <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.kitchen}></use>
-            </svg>
-            <p className={css.equipmentText}>{camper.kitchen}</p>
-          </li>
-          <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.ac}></use>
-            </svg>
-            <p className={css.equipmentText}>{camper.ac}</p>
-          </li>
-          <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.bathroom}></use>
-            </svg>
-            <p className={css.equipmentText}>{camper.bathroom}</p>
-          </li>
-          <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.tv}></use>
-            </svg>
-            <p className={css.equipmentText}>{camper.tv}</p>
-          </li>
-          <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.radio}></use>
-            </svg>
-            <p className={css.equipmentText}>{camper.radio}</p>
-          </li>
+          {camper.kitchen && (
+            <li className={css.equipmentItem}>
+              <svg className={css.equipmentIcon}>
+                <use href={ICONS.kitchen}></use>
+              </svg>
+              <p className={css.equipmentText}>Kitchen</p>
+            </li>
+          )}
+          {camper.AC && (
+            <li className={css.equipmentItem}>
+              <svg className={css.equipmentIcon}>
+                <use href={ICONS.ac}></use>
+              </svg>
+              <p className={css.equipmentText}>AC</p>
+            </li>
+          )}
+          {camper.bathroom && (
+            <li className={css.equipmentItem}>
+              <svg className={css.equipmentIcon}>
+                <use href={ICONS.bathroom}></use>
+              </svg>
+              <p className={css.equipmentText}>Bathroom</p>
+            </li>
+          )}
+          {camper.tv && (
+            <li className={css.equipmentItem}>
+              <svg className={css.equipmentIcon}>
+                <use href={ICONS.tv}></use>
+              </svg>
+              <p className={css.equipmentText}>TV</p>
+            </li>
+          )}
+          {camper.radio && (
+            <li className={css.equipmentItem}>
+              <svg className={css.equipmentIcon}>
+                <use href={ICONS.radio}></use>
+              </svg>
+              <p className={css.equipmentText}>Radio</p>
+            </li>
+          )}
         </ul>
         <Link to={camper.id} className={css.linkCamperdetails}>
           Show more

@@ -74,14 +74,10 @@
   margin-right: 4px;
 }
 
-.rating {
-  line-height: 1.5;
-  margin-right: 4px;
-}
-
-.review {
+.ratingReview {
   line-height: 1.5;
   margin-right: 16px;
+  border-bottom: 1px solid var(--main);
 }
 
 .locationIcon {
@@ -102,7 +98,6 @@
   line-height: 1.5;
   color: var(--dark);
 
-  word-spacing: -1px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }

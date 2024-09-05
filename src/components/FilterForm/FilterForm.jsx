@@ -44,7 +44,7 @@ const FilterForm = () => {
         validationSchema={FilterFormSchema}
       >
         <Form>
-          <label className={css.label}>
+          <label className={css.labelLocation}>
             <span className={css.labelText}>Location</span>
             <div className={css.inputWrapper}>
               <Field
