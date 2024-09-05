@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import { useState } from 'react';
 import clsx from 'clsx';
 
+import { SvgIcon } from '../REUSABLE/SvgIcon/SvgIcon';
 import { ICONS } from '../Constants/constants';
 import css from './FilterForm.module.css';
 
@@ -56,11 +57,10 @@ const FilterForm = () => {
                 onBlur={handleBlur}
               ></Field>
               <ErrorMessage name="location" component="div" />
-              <svg className={css.locationIcon}>
-                <use
-                  href={isFocus ? ICONS.locationPress : ICONS.location}
-                ></use>
-              </svg>
+              <SvgIcon
+                addClass={css.locationIcon}
+                icon={isFocus ? ICONS.locationPress : ICONS.location}
+              />
             </div>
           </label>
           <p className={css.filterHeadline}>Filters</p>
@@ -74,9 +74,7 @@ const FilterForm = () => {
                 id="AC"
               />
               <label className={clsx(css.filterLabel)} htmlFor="AC">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.ac}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.ac} />
                 <span className={css.filterText}>AC</span>
               </label>
             </li>
@@ -89,9 +87,7 @@ const FilterForm = () => {
                 id="automatic"
               />
               <label className={clsx(css.filterLabel)} htmlFor="automatic">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.transmission}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.transmission} />
                 <span className={css.filterText}>Automatic</span>
               </label>
             </li>
@@ -103,9 +99,7 @@ const FilterForm = () => {
                 id="kitchen"
               />
               <label className={clsx(css.filterLabel)} htmlFor="kitchen">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.kitchen}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.kitchen} />
                 <span className={css.filterText}>Kitchen</span>
               </label>
             </li>
@@ -117,9 +111,7 @@ const FilterForm = () => {
                 id="tv"
               />
               <label className={clsx(css.filterLabel)} htmlFor="tv">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.tv}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.tv} />
                 <span className={css.filterText}>TV</span>
               </label>
             </li>
@@ -131,9 +123,7 @@ const FilterForm = () => {
                 id="bathroom"
               />
               <label className={clsx(css.filterLabel)} htmlFor="bathroom">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.bathroom}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.bathroom} />
                 <span className={css.filterText}>Bathroom</span>
               </label>
             </li>
@@ -150,9 +140,7 @@ const FilterForm = () => {
                 id="panelTruck"
               />
               <label className={clsx(css.filterLabel)} htmlFor="panelTruck">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.formVan}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.formVan} />
                 <span className={css.filterText}>Van</span>
               </label>
             </li>
@@ -168,9 +156,10 @@ const FilterForm = () => {
                 className={clsx(css.filterLabel)}
                 htmlFor="fullyIntegrated"
               >
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.formFullyIntegrated}></use>
-                </svg>
+                <SvgIcon
+                  addClass={css.filterIcon}
+                  icon={ICONS.formFullyIntegrated}
+                />
                 <span className={css.filterText}>Fully Integrated</span>
               </label>
             </li>
@@ -183,9 +172,7 @@ const FilterForm = () => {
                 id="alcove"
               />
               <label className={clsx(css.filterLabel)} htmlFor="alcove">
-                <svg className={css.filterIcon}>
-                  <use href={ICONS.formAlcove}></use>
-                </svg>
+                <SvgIcon addClass={css.filterIcon} icon={ICONS.formAlcove} />
                 <span className={css.filterText}>Alcove</span>
               </label>
             </li>

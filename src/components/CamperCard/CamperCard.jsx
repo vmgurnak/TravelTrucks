@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ICONS } from '../Constants/constants';
+import { SvgIcon } from '../REUSABLE/SvgIcon/SvgIcon';
 
 import css from './CamperCard.module.css';
 
@@ -24,74 +25,54 @@ const CamperCard = ({ camper }) => {
           <h3 className={css.name}>{camper.name}</h3>
           <p className={css.price}>{toEuro.format(camper.price)}</p>
           <button className={css.btnFavorite} type="button">
-            <svg className={css.favorite}>
-              <use href={ICONS.heart}></use>
-            </svg>
+            <SvgIcon addClass={css.favorite} icon={ICONS.heart} />
           </button>
         </div>
         <div className={css.ratingWrap}>
-          <svg className={css.star}>
-            <use href={ICONS.star}></use>
-          </svg>
+          <SvgIcon addClass={css.star} icon={ICONS.star} />
           <p className={css.ratingReview}>
             {camper.rating}({camper.reviews.length} Reviews)
           </p>
-          <svg className={css.locationIcon}>
-            <use href={ICONS.location}></use>
-          </svg>
+          <SvgIcon addClass={css.locationIcon} icon={ICONS.location} />
           <div className={css.location}>{camper.location}</div>
         </div>
         <p className={css.description}>{camper.description}</p>
         <ul className={css.equipmentList}>
           <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.transmission}></use>
-            </svg>
+            <SvgIcon addClass={css.equipmentIcon} icon={ICONS.transmission} />
             <p className={css.equipmentText}>{camper.transmission}</p>
           </li>
           <li className={css.equipmentItem}>
-            <svg className={css.equipmentIcon}>
-              <use href={ICONS.engine}></use>
-            </svg>
+            <SvgIcon addClass={css.equipmentIcon} icon={ICONS.engine} />
             <p className={css.equipmentText}>{camper.engine}</p>
           </li>
           {camper.kitchen && (
             <li className={css.equipmentItem}>
-              <svg className={css.equipmentIcon}>
-                <use href={ICONS.kitchen}></use>
-              </svg>
+              <SvgIcon addClass={css.equipmentIcon} icon={ICONS.kitchen} />
               <p className={css.equipmentText}>Kitchen</p>
             </li>
           )}
           {camper.AC && (
             <li className={css.equipmentItem}>
-              <svg className={css.equipmentIcon}>
-                <use href={ICONS.ac}></use>
-              </svg>
+              <SvgIcon addClass={css.equipmentIcon} icon={ICONS.ac} />
               <p className={css.equipmentText}>AC</p>
             </li>
           )}
           {camper.bathroom && (
             <li className={css.equipmentItem}>
-              <svg className={css.equipmentIcon}>
-                <use href={ICONS.bathroom}></use>
-              </svg>
+              <SvgIcon addClass={css.equipmentIcon} icon={ICONS.bathroom} />
               <p className={css.equipmentText}>Bathroom</p>
             </li>
           )}
           {camper.tv && (
             <li className={css.equipmentItem}>
-              <svg className={css.equipmentIcon}>
-                <use href={ICONS.tv}></use>
-              </svg>
+              <SvgIcon addClass={css.equipmentIcon} icon={ICONS.tv} />
               <p className={css.equipmentText}>TV</p>
             </li>
           )}
           {camper.radio && (
             <li className={css.equipmentItem}>
-              <svg className={css.equipmentIcon}>
-                <use href={ICONS.radio}></use>
-              </svg>
+              <SvgIcon addClass={css.equipmentIcon} icon={ICONS.radio} />
               <p className={css.equipmentText}>Radio</p>
             </li>
           )}
