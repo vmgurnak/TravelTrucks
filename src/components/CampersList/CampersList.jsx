@@ -1,27 +1,33 @@
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn.jsx';
 import CamperCard from '../CamperCard/CamperCard.jsx';
-import { selectCampers } from '../../redux/campers/selectors.js';
+
+import { selectFilteredCampers } from '../../redux/campers/selectors.js';
 
 import css from './CampersList.module.css';
 
 const CampersList = () => {
-  const campers = useSelector(selectCampers);
-  console.log(campers);
+  const [items, setItems] = useState(4);
+
+  const filteredCampers = useSelector(selectFilteredCampers);
+  const showCampers = filteredCampers.slice(0, items);
+  const quantityCampers = filteredCampers.length;
+
+  const showMore = () => setItems(items + 4);
+  console.log(filteredCampers);
 
   return (
     <div className={css.container}>
       <ul>
-        {campers.map(camper => (
+        {showCampers.map(camper => (
           <li key={camper.id} className={css.item}>
             <CamperCard camper={camper} />
           </li>
         ))}
       </ul>
-
-      <button className={css.btnLoadMore} type="button">
-        Load more
-      </button>
+      {quantityCampers > items && <LoadMoreBtn showMore={showMore} />}
     </div>
   );
 };

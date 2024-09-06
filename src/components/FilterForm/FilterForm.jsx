@@ -1,10 +1,14 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import * as Yup from 'yup';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
 import clsx from 'clsx';
+import * as Yup from 'yup';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 
 import { SvgIcon } from '../REUSABLE/SvgIcon/SvgIcon';
 import { ICONS } from '../Constants/constants';
+import { filters } from '../../redux/filters/slice';
+
 import css from './FilterForm.module.css';
 
 const INITIAL_FORM_DATA = {
@@ -17,17 +21,13 @@ const INITIAL_FORM_DATA = {
   form: '',
 };
 
-const handleSubmit = (values, action) => {
-  console.log(values);
-  action.resetForm();
-};
-
 const FilterFormSchema = Yup.object().shape({
   location: Yup.string().min(2, 'Location must be at least 2 characters!'),
 });
 
 const FilterForm = () => {
   const [isFocus, setIsFocus] = useState(false);
+  const dispatch = useDispatch();
 
   const handleFocus = () => {
     setIsFocus(true);
@@ -35,6 +35,12 @@ const FilterForm = () => {
 
   const handleBlur = () => {
     setIsFocus(false);
+  };
+
+  const handleSubmit = (values, action) => {
+    dispatch(filters(values));
+    console.log(values);
+    action.resetForm();
   };
 
   return (
