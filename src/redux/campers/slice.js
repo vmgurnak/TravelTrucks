@@ -5,7 +5,7 @@ import { fetchCampersRequest } from './operations';
 const INITIAL_STATE = {
   items: [],
   loading: false,
-  error: null,
+  error: false,
 };
 
 const handlePending = state => {

@@ -9,6 +9,21 @@
   overflow-y: auto;
 }
 
+.textError,
+.textLoading {
+  text-align: center;
+  margin-top: 40px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--red);
+}
+
+.textLoading {
+  color: var(--dark);
+}
+
 .item {
 }
 
