@@ -19,7 +19,7 @@ export const selectFilteredCampers = createSelector(
       const filterKitchen = filters.kitchen
         ? filters.kitchen === camper.kitchen
         : true;
-      const filterTv = filters.tv ? filters.tv === camper.tv : true;
+      const filterTV = filters.TV ? filters.TV === camper.TV : true;
       const filterBathroom = filters.bathroom
         ? filters.bathroom === camper.bathroom
         : true;
@@ -30,7 +30,7 @@ export const selectFilteredCampers = createSelector(
         filterAC &&
         filterTransmission &&
         filterKitchen &&
-        filterTv &&
+        filterTV &&
         filterBathroom &&
         filterForm
       );

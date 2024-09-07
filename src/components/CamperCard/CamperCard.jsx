@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+import { addFavorites } from '../../redux/favorites/slice';
 import { ICONS } from '../Constants/constants';
 import { SvgIcon } from '../REUSABLE/SvgIcon/SvgIcon';
 
@@ -11,6 +14,8 @@ const toEuro = new Intl.NumberFormat('en-EU', {
 });
 
 const CamperCard = ({ camper }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className={css.container}>
       <div className={css.imgContainer}>
@@ -24,7 +29,11 @@ const CamperCard = ({ camper }) => {
         <div className={css.contWrap}>
           <h3 className={css.name}>{camper.name}</h3>
           <p className={css.price}>{toEuro.format(camper.price)}</p>
-          <button className={css.btnFavorite} type="button">
+          <button
+            className={css.btnFavorite}
+            type="button"
+            onClick={() => dispatch(addFavorites(camper))}
+          >
             <SvgIcon addClass={css.favorite} icon={ICONS.heart} />
           </button>
         </div>

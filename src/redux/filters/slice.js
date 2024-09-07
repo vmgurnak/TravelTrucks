@@ -8,7 +8,7 @@ const INITIAL_STATE = {
     kitchen: false,
     location: '',
     transmission: '',
-    tv: false,
+    TV: false,
   },
 };
 

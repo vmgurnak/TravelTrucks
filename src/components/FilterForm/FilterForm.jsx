@@ -16,7 +16,7 @@ const INITIAL_FORM_DATA = {
   AC: '',
   transmission: '',
   kitchen: '',
-  tv: '',
+  TV: '',
   bathroom: '',
   form: '',
 };
@@ -113,7 +113,7 @@ const FilterForm = () => {
               <Field
                 className={css.filterInput}
                 type="checkbox"
-                name="tv"
+                name="TV"
                 id="tv"
               />
               <label className={clsx(css.filterLabel)} htmlFor="tv">
