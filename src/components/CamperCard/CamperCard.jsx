@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { selectFavorites } from '../../redux/favorites/selectors';
 import { addFavorites } from '../../redux/favorites/slice';
 import { ICONS } from '../Constants/constants';
 import { SvgIcon } from '../REUSABLE/SvgIcon/SvgIcon';
@@ -15,6 +16,8 @@ const toEuro = new Intl.NumberFormat('en-EU', {
 
 const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+  const isFavorite = favorites.some(fav => fav.id === camper.id);
 
   return (
     <div className={css.container}>
@@ -34,7 +37,12 @@ const CamperCard = ({ camper }) => {
             type="button"
             onClick={() => dispatch(addFavorites(camper))}
           >
-            <SvgIcon addClass={css.favorite} icon={ICONS.heart} />
+            {isFavorite ? (
+              <SvgIcon addClass={css.favorite} icon={ICONS.heartPressed} />
+            ) : (
+              <SvgIcon addClass={css.favorite} icon={ICONS.heart} />
+            )}
+            {/* <SvgIcon addClass={css.favorite} icon={ICONS.heart} /> */}
           </button>
         </div>
         <div className={css.ratingWrap}>

@@ -24,3 +24,13 @@ export const ICONS = {
   formFullyIntegrated: `${icons}#form-fullyintegrated`,
   formAlcove: `${icons}#form-alcove`,
 };
+
+export const INITIAL_FORM_DATA = {
+  location: '',
+  AC: '',
+  transmission: '',
+  kitchen: '',
+  TV: '',
+  bathroom: '',
+  form: '',
+};

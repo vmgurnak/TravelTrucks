@@ -1,0 +1,49 @@
+.container {
+  outline: 1px solid red;
+  outline-offset: -2px;
+
+  width: 888px;
+  height: 1664px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.textError,
+.textLoading {
+  text-align: center;
+  margin-top: 40px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--red);
+}
+
+.textLoading {
+  color: var(--dark);
+}
+
+.item {
+}
+
+.item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.btnLoadMore {
+  padding: 16px 32px;
+  margin: 40px auto 0 auto;
+
+  border: 1px solid var(--gray);
+  border-radius: 200px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.btnLoadMore:hover,
+.btnLoadMore:focus {
+  border-color: var(--dark-red);
+}

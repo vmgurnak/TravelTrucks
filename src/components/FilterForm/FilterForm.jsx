@@ -11,15 +11,7 @@ import { filters } from '../../redux/filters/slice';
 
 import css from './FilterForm.module.css';
 
-const INITIAL_FORM_DATA = {
-  location: '',
-  AC: '',
-  transmission: '',
-  kitchen: '',
-  TV: '',
-  bathroom: '',
-  form: '',
-};
+import { INITIAL_FORM_DATA } from '../Constants/constants';
 
 const FilterFormSchema = Yup.object().shape({
   location: Yup.string().min(2, 'Location must be at least 2 characters!'),
