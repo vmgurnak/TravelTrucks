@@ -11,3 +11,8 @@ export const requestCampers = async () => {
 
   return items;
 };
+
+export const requestCamperID = async id => {
+  const { data } = await instance.get(`/campers/${id}`);
+  return data;
+};

@@ -81,7 +81,7 @@ const CamperCard = ({ camper }) => {
               <p className={css.equipmentText}>Bathroom</p>
             </li>
           )}
-          {camper.tv && (
+          {camper.TV && (
             <li className={css.equipmentItem}>
               <SvgIcon addClass={css.equipmentIcon} icon={ICONS.tv} />
               <p className={css.equipmentText}>TV</p>
