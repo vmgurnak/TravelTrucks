@@ -5,6 +5,21 @@
   padding: 48px 64px 80px 64px;
 }
 
+.textError,
+.textLoading {
+  text-align: center;
+  margin-top: 40px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--red);
+}
+
+.textLoading {
+  color: var(--dark);
+}
+
 .camperInfo {
   outline: 1px solid red;
   outline-offset: -2px;
@@ -12,6 +27,74 @@
   width: 1312px;
   height: 528px;
   margin-bottom: 60px;
+}
+
+.name {
+  margin-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.ratingWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.star {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.ratingReview {
+  line-height: 1.5;
+  margin-right: 16px;
+  border-bottom: 1px solid var(--main);
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.location {
+  line-height: 1.5;
+}
+
+.price {
+  margin-bottom: 28px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.camperGallery {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+
+.galleryItem {
+  width: 292px;
+  height: 312px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 75%;
+}
+
+.description {
+  line-height: 1.5;
+  color: var(--dark);
 }
 
 .camperDetailsLinks {

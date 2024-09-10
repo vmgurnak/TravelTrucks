@@ -94,7 +94,7 @@ const CamperCard = ({ camper }) => {
             </li>
           )}
         </ul>
-        <Link to={camper.id} className={css.linkCamperdetails}>
+        <Link to={`${camper.id}/features`} className={css.linkCamperdetails}>
           Show more
         </Link>
       </div>

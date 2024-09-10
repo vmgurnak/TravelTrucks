@@ -4,7 +4,7 @@ import { fetchCamperRequestID, fetchCampersRequest } from './operations';
 
 const INITIAL_STATE = {
   items: [],
-  item: {},
+  item: null,
   loading: false,
   error: false,
 };
