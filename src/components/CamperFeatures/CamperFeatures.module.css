@@ -2,6 +2,79 @@
   outline: 1px solid red;
   outline-offset: -2px;
 
+  display: flex;
+  flex-direction: column;
+
   width: 631px;
   height: 588px;
+
+  padding: 44px 52px;
+  border-radius: 10px;
+  background-color: var(--grey);
+}
+
+.equipmentList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: auto;
+}
+
+.equipmentItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 18px;
+  border-radius: 100px;
+
+  background-color: var(--light);
+}
+
+.equipmentIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.equipmentText {
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+parameters {
+}
+
+.parametersTitle {
+  padding-bottom: 23px;
+  margin-bottom: 23px;
+  border-bottom: 2px solid var(--gray);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.parametersList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.parametersItem {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.itemName {
+  margin-right: auto;
+}
+
+.itemValue {
+  text-transform: capitalize;
+  word-spacing: 3px;
 }
