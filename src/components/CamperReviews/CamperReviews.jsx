@@ -9,29 +9,39 @@ import css from './CamperReviews.module.css';
 const CamperReviews = () => {
   const camper = useSelector(selectCamper);
 
-  // const raiting = Array(5).fill(0);
-
   return (
     <div className={css.camperReviews}>
-      <ul>
+      <ul className={css.reviewList}>
         {camper.reviews.map((review, index) => (
           <li className={css.reviewItem} key={index}>
-            <div className={css.reviewLetter}>
-              {review.reviewer_name.charAt(0)}
+            <div className={css.reviewWrap}>
+              <div className={css.reviewLetter}>
+                {review.reviewer_name.charAt(0)}
+              </div>
+              <div>
+                <h4 className={css.reviewName}>{review.reviewer_name}</h4>
+                <div className={css.reviewRaiting}>
+                  {Array(review.reviewer_rating)
+                    .fill(0)
+                    .map((_, index) => (
+                      <SvgIcon
+                        addClass={css.reviewIcon}
+                        key={index}
+                        icon={ICONS.starPressed}
+                      />
+                    ))}
+                  {Array(5 - review.reviewer_rating)
+                    .fill(0)
+                    .map((_, index) => (
+                      <SvgIcon
+                        addClass={css.reviewIcon}
+                        key={index}
+                        icon={ICONS.star}
+                      />
+                    ))}
+                </div>
+              </div>
             </div>
-            <h4>{review.reviewer_name}</h4>
-            {Array(review.reviewer_rating)
-              .fill(0)
-              .map((_, index) => (
-                <SvgIcon
-                  addClass={css.reviewIcon}
-                  key={index}
-                  icon={ICONS.star}
-                />
-              ))}
-
-            <div>{review.reviewer_rating}</div>
-            {/* <SvgIcon addClass={css.reviewIcon} icon={ICONS.star} /> */}
             <p className={css.reviewText}>{review.comment}</p>
           </li>
         ))}
