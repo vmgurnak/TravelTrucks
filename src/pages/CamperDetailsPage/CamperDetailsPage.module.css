@@ -140,11 +140,3 @@
 
 .camperDetailsInfo {
 }
-
-.camperBookForm {
-  outline: 1px solid red;
-  outline-offset: -2px;
-
-  width: 641px;
-  height: 588px;
-}
