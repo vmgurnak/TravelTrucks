@@ -29,14 +29,13 @@
   margin-bottom: 14px;
 }
 
-.label:last-child {
+.label:nth-child(4) {
   margin-bottom: 24px;
   height: 118px;
 }
 
 .input {
   width: 100%;
-  height: 100%;
   padding: 18px;
 
   border-radius: 12px;
@@ -44,6 +43,12 @@
   outline: none;
 
   background-color: var(--light-grey);
+  line-height: 1.5;
+}
+
+.label:nth-child(4) > .input {
+  height: 100%;
+  resize: none;
 }
 
 .input::placeholder {
@@ -53,4 +58,25 @@
 
 .error {
   color: var(--red);
+}
+
+.btn {
+  width: 166px;
+  margin: 0 auto;
+  padding: 16px 60px;
+  border-radius: 200px;
+  background-color: var(--red);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+
+  transition: background-color var(--transition-delay) var(--transition);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--dark-red);
 }

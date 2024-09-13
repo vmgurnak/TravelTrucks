@@ -1,5 +1,12 @@
+import { useSelector } from 'react-redux';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import toast, { Toaster } from 'react-hot-toast';
+import { useState } from 'react';
 import * as Yup from 'yup';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
+
+import { selectCamper } from '../../redux/campers/selectors';
 
 import css from './CamperBookForm.module.css';
 
@@ -25,9 +32,17 @@ const initialValues = {
 };
 
 const CamperBookForm = () => {
+  const [startDate, setStartDate] = useState(null);
+  const camper = useSelector(selectCamper);
   const handleSubmit = (values, action) => {
     console.log(values);
     action.resetForm();
+    toast.success('Your booking request has been successfully sent');
+    setTimeout(() => {
+      toast.success(
+        `Camper ${camper.name} for ${values.name} booked on ${values.bookingDate}. Thank you!`
+      );
+    }, 7000);
   };
   return (
     <div className={css.camperBookForm}>
@@ -59,12 +74,22 @@ const CamperBookForm = () => {
             ></Field>
           </label>
           <label className={css.label}>
-            <Field
+            {/* <Field
               className={css.input}
               name="bookingDate"
               type="date"
               placeholder="Booking date*"
-            ></Field>
+            ></Field> */}
+            <DatePicker
+              className={css.input}
+              selected={startDate}
+              onChange={date => {
+                setStartDate(date);
+                // setFieldValue('bookingDate', date);
+              }}
+              placeholderText="Booking date*"
+              dateFormat="dd.MM.yyyy"
+            />
           </label>
           <label className={css.label}>
             <Field
@@ -74,8 +99,22 @@ const CamperBookForm = () => {
               placeholder="Comment"
             ></Field>
           </label>
+          <button type="submit" className={css.btn}>
+            Send
+          </button>
         </Form>
       </Formik>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            border: '2px solid #dadde1',
+            padding: '10px',
+            color: '#101828',
+          },
+        }}
+      />
     </div>
   );
 };
