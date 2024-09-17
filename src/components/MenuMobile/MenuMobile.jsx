@@ -10,13 +10,13 @@ import css from './MenuMobile.module.css';
 const MenuMobile = ({ closeMenu, isOpenMenu }) => {
   return (
     <div className={clsx(css.menuMobile, isOpenMenu && css.menuMobileOpen)}>
-      <Link className={css.logoLink} to="/">
+      <Link className={css.logoLink} to="/" onClick={closeMenu}>
         <SvgIcon addClass={css.logo} icon={ICONS.logo} />
       </Link>
       <button className={css.btnBurgerClose} onClick={closeMenu}>
         <SvgIcon addClass={css.iconMenuClose} icon={ICONS.menuClose} />
       </button>
-      <Menu />
+      <Menu closeMenu={closeMenu} />
     </div>
   );
 };

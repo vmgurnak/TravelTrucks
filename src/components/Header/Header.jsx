@@ -35,8 +35,6 @@ const Header = () => {
       ) : (
         <Menu />
       )}
-      {/* <MenuDesktop />
-      <MenuMobile /> */}
     </header>
   );
 };
