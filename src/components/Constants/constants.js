@@ -23,6 +23,9 @@ export const ICONS = {
   formVan: `${icons}#form-van`,
   formFullyIntegrated: `${icons}#form-fullyintegrated`,
   formAlcove: `${icons}#form-alcove`,
+
+  menuBurger: `${icons}#menu-burger`,
+  menuClose: `${icons}#menu-close`,
 };
 
 export const INITIAL_FORM_DATA = {

@@ -18,7 +18,7 @@ const BookFormShema = Yup.object().shape({
   email: Yup.string()
     .email('Must be a valid email!')
     .required('Email is required!'),
-  bookingDate: Yup.date().required('Booking date is required!'),
+  bookingDate: Yup.date().required('Date is required!'),
   comment: Yup.string()
     .min(3, 'Comment must be at least 3 characters!')
     .max(256, 'Comment must be less than 50 characters!'),
@@ -37,10 +37,13 @@ const CamperBookForm = () => {
   const handleSubmit = (values, action) => {
     console.log(values);
     action.resetForm();
+    setStartDate(null);
     toast.success('Your booking request has been successfully sent');
     setTimeout(() => {
       toast.success(
-        `Camper ${camper.name} for ${values.name} booked on ${values.bookingDate}. Thank you!`
+        `Camper ${camper.name} for ${
+          values.name
+        } booked on ${values.bookingDate.toLocaleDateString()}. Thank you!`
       );
     }, 7000);
   };
@@ -55,54 +58,64 @@ const CamperBookForm = () => {
         onSubmit={handleSubmit}
         validationSchema={BookFormShema}
       >
-        <Form>
-          <label className={css.label}>
-            <Field
-              className={css.input}
-              name="name"
-              type="text"
-              placeholder="Name*"
-            ></Field>
-            <ErrorMessage className={css.error} name="name" component="div" />
-          </label>
-          <label className={css.label}>
-            <Field
-              className={css.input}
-              name="email"
-              type="email"
-              placeholder="Email*"
-            ></Field>
-          </label>
-          <label className={css.label}>
-            {/* <Field
-              className={css.input}
-              name="bookingDate"
-              type="date"
-              placeholder="Booking date*"
-            ></Field> */}
-            <DatePicker
-              className={css.input}
-              selected={startDate}
-              onChange={date => {
-                setStartDate(date);
-                // setFieldValue('bookingDate', date);
-              }}
-              placeholderText="Booking date*"
-              dateFormat="dd.MM.yyyy"
-            />
-          </label>
-          <label className={css.label}>
-            <Field
-              className={css.input}
-              name="comment"
-              as="textarea"
-              placeholder="Comment"
-            ></Field>
-          </label>
-          <button type="submit" className={css.btn}>
-            Send
-          </button>
-        </Form>
+        {({ setFieldValue }) => (
+          <Form>
+            <label className={css.label}>
+              <Field
+                className={css.input}
+                name="name"
+                type="text"
+                placeholder="Name*"
+              ></Field>
+              <ErrorMessage className={css.error} name="name" component="div" />
+            </label>
+            <label className={css.label}>
+              <Field
+                className={css.input}
+                name="email"
+                type="email"
+                placeholder="Email*"
+              ></Field>
+              <ErrorMessage
+                className={css.error}
+                name="email"
+                component="div"
+              />
+            </label>
+            <label className={css.label}>
+              <DatePicker
+                className={css.input}
+                selected={startDate}
+                onChange={date => {
+                  setStartDate(date);
+                  setFieldValue('bookingDate', date);
+                }}
+                minDate={new Date()}
+                toggleCalendarOnIconClick
+                shouldCloseOnSelect={false}
+                placeholderText="Booking date*"
+                dateFormat="dd.MM.yyyy"
+                onFocus={() => setStartDate(startDate)}
+              />
+              <ErrorMessage
+                className={css.error}
+                name="bookingDate"
+                component="div"
+              />
+            </label>
+            <label className={css.label}>
+              <Field
+                className={css.input}
+                name="comment"
+                as="textarea"
+                placeholder="Comment"
+              ></Field>
+            </label>
+            <button type="submit" className={css.btn}>
+              Send
+            </button>
+          </Form>
+        )}
       </Formik>
       <Toaster
         position="top-right"

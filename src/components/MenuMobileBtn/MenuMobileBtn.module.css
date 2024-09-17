@@ -1,0 +1,9 @@
+.btnMenu {
+  padding: 15px 0;
+}
+
+.iconMenu {
+  height: 40px;
+  width: 40px;
+  stroke: var(--dark);
+}

@@ -1,6 +1,11 @@
 .header {
   /* outline: 1px solid red;
   outline-offset: -2px; */
+  /* position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1; */
 
   display: flex;
   align-items: center;
@@ -23,42 +28,15 @@
   padding: 28px 0;
 
   @media (min-width: 768px) {
-    margin-right: 152px;
+    margin-right: auto;
   }
 
   @media (min-width: 1440px) {
-    margin-right: 450px;
+    margin-right: 373px;
   }
 }
 
 .logo {
   width: 136px;
   height: 16px;
-}
-
-.navList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-
-  @media (min-width: 768px) {
-    gap: 24px;
-  }
-
-  @media (min-width: 1440px) {
-    gap: 32px;
-  }
-}
-
-.link {
-  padding: 24px 0;
-}
-
-.active {
-  color: var(--dark-red);
 }
