@@ -1,12 +1,17 @@
-.container {
+.containerCampersList {
   outline: 1px solid red;
   outline-offset: -2px;
 
-  width: 888px;
-  height: 1664px;
+  width: 100%;
+  height: auto;
 
   overflow-x: hidden;
   overflow-y: auto;
+
+  @media (min-width: 768px) {
+    width: 888px;
+    height: 1664px;
+  }
 }
 
 .textError,
@@ -28,22 +33,9 @@
 }
 
 .item:not(:last-child) {
-  margin-bottom: 32px;
-}
+  margin-bottom: 15px;
 
-.btnLoadMore {
-  padding: 16px 32px;
-  margin: 40px auto 0 auto;
-
-  border: 1px solid var(--gray);
-  border-radius: 200px;
-
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-}
-
-.btnLoadMore:hover,
-.btnLoadMore:focus {
-  border-color: var(--dark-red);
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
 }

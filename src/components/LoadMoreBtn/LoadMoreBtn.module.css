@@ -1,6 +1,6 @@
 .loadMoreBtn {
   padding: 16px 32px;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 0 auto;
 
   border: 1px solid var(--gray);
   border-radius: 200px;
@@ -8,6 +8,12 @@
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.01em;
+
+  transition: border-color var(--transition-delay) var(--transition);
+
+  @media (min-width: 768px) {
+    margin: 40px auto 0 auto;
+  }
 }
 
 .loadMoreBtn:hover,

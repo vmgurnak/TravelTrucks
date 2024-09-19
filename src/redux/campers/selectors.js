@@ -35,7 +35,6 @@ export const selectFilteredCampers = createSelector(
         filterBathroom &&
         filterForm
       );
-      // Object.entries(filters).every(([key, value]) => camper[key] === value)
     });
     return filteredCampers;
   }

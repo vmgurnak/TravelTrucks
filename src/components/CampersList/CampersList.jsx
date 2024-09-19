@@ -26,7 +26,7 @@ const CampersList = () => {
   console.log(filteredCampers);
 
   return (
-    <div className={css.container}>
+    <div className={css.containerCampersList}>
       {isError && (
         <p className={css.textError}>
           Sorry, the service is not available. Please try again later.

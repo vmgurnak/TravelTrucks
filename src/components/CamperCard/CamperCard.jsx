@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useWindowSize } from 'react-use';
 
 import { selectFavorites } from '../../redux/favorites/selectors';
 import { addFavorites } from '../../redux/favorites/slice';
@@ -15,12 +16,13 @@ const toEuro = new Intl.NumberFormat('en-EU', {
 });
 
 const CamperCard = ({ camper }) => {
+  const { width } = useWindowSize();
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
   const isFavorite = favorites.some(fav => fav.id === camper.id);
 
   return (
-    <div className={css.container}>
+    <div className={css.containerCamperCard}>
       <div className={css.imgContainer}>
         <img
           className={css.img}
@@ -46,14 +48,16 @@ const CamperCard = ({ camper }) => {
           </button>
         </div>
         <div className={css.ratingWrap}>
-          <SvgIcon addClass={css.star} icon={ICONS.star} />
+          <SvgIcon addClass={css.star} icon={ICONS.starPressed} />
           <p className={css.ratingReview}>
             {camper.rating}({camper.reviews.length} Reviews)
           </p>
           <SvgIcon addClass={css.locationIcon} icon={ICONS.location} />
           <div className={css.location}>{camper.location}</div>
         </div>
-        <p className={css.description}>{camper.description}</p>
+        {width >= 768 && (
+          <p className={css.description}>{camper.description}</p>
+        )}
         <ul className={css.equipmentList}>
           <li className={css.equipmentItem}>
             <SvgIcon addClass={css.equipmentIcon} icon={ICONS.transmission} />

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ICONS } from '../Constants/constants';
 import { SvgIcon } from '../REUSABLE/SvgIcon/SvgIcon';
 

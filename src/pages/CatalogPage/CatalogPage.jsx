@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useWindowSize } from 'react-use';
 
 import FilterForm from '../../components/FilterForm/FilterForm';
 import CampersList from '../../components/CampersList/CampersList';
@@ -9,8 +10,10 @@ import { filters } from '../../redux/filters/slice';
 import { INITIAL_FORM_DATA } from '../../components/Constants/constants';
 
 import css from './CatalogPage.module.css';
+import ModalButton from '../../components/REUSABLE/ModalButton/ModalButton';
 
 const CatalogPage = () => {
+  const { width } = useWindowSize();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,8 +23,17 @@ const CatalogPage = () => {
 
   return (
     <section className={css.catalogPage}>
-      <FilterForm />
-      <CampersList />
+      {width < 1440 ? (
+        <>
+          <ModalButton />
+          <CampersList />
+        </>
+      ) : (
+        <>
+          <FilterForm />
+          <CampersList />
+        </>
+      )}
     </section>
   );
 };
