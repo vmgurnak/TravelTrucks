@@ -1,4 +1,8 @@
 .homePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
   padding: 100px 16px 160px 16px;
 
   background-color: rgba(0, 0, 0, 0.2);
@@ -16,6 +20,7 @@
   }
 
   @media (min-width: 768px) {
+    display: block;
     padding: 90px 32px 90px 32px;
   }
 
@@ -39,7 +44,7 @@
 }
 
 .text {
-  margin-bottom: 80px;
+  margin-bottom: auto;
 
   font-weight: 600;
   font-size: 24px;
