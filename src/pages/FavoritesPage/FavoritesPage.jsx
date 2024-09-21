@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useWindowSize } from 'react-use';
 
 import { filters } from '../../redux/filters/slice';
 
@@ -8,8 +9,10 @@ import FilterForm from '../../components/FilterForm/FilterForm';
 import { INITIAL_FORM_DATA } from '../../components/Constants/constants';
 
 import css from './FavoritesPage.module.css';
+import ModalButton from '../../components/REUSABLE/ModalButton/ModalButton.jsx';
 
 const FavotitesPage = () => {
+  const { width } = useWindowSize();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,8 +21,17 @@ const FavotitesPage = () => {
 
   return (
     <section className={css.favotitesPage}>
-      <FilterForm />
-      <FavoritesList />
+      {width < 1440 ? (
+        <>
+          <ModalButton />
+          <FavoritesList />
+        </>
+      ) : (
+        <>
+          <FilterForm />
+          <FavoritesList />
+        </>
+      )}
     </section>
   );
 };

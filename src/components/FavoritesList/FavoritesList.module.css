@@ -1,12 +1,22 @@
-.container {
+.containerFavoritesList {
   outline: 1px solid red;
   outline-offset: -2px;
 
-  width: 888px;
-  height: 1664px;
+  width: 100%;
+  height: auto;
 
   overflow-x: hidden;
   overflow-y: auto;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 1440px) {
+    width: 888px;
+    height: 1664px;
+  }
 }
 
 .textError,
@@ -28,7 +38,15 @@
 }
 
 .item:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 32px;
+  }
 }
 
 .btnLoadMore {

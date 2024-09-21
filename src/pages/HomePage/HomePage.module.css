@@ -1,7 +1,7 @@
 .homePage {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 80vh;
 
   padding: 100px 16px 160px 16px;
 

@@ -8,7 +8,7 @@ import { selectFilteredFavorites } from '../../redux/favorites/selectors.js';
 
 import css from './FavoritesList.module.css';
 
-const CampersList = () => {
+const FavoritesList = () => {
   const [items, setItems] = useState(4);
 
   const favoritesCampers = useSelector(selectFilteredFavorites);
@@ -20,7 +20,7 @@ const CampersList = () => {
   console.log(favoritesCampers);
 
   return (
-    <div className={css.container}>
+    <div className={css.containerFavoritesList}>
       {favoritesCampers.length === 0 && (
         <p className={css.textError}>No favotites campers found!</p>
       )}
@@ -39,4 +39,4 @@ const CampersList = () => {
   );
 };
 
-export default CampersList;
+export default FavoritesList;
