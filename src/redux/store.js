@@ -14,6 +14,7 @@ import storage from 'redux-persist/lib/storage';
 import { campersReducer } from './campers/slice.js';
 import { filtersReducer } from './filters/slice.js';
 import { favoritesReducer } from './favorites/slice.js';
+import { modalsReducer } from './modal/slice.js';
 
 const persistListConfig = {
   key: 'favoritesСampers',
@@ -26,6 +27,7 @@ export const store = configureStore({
     campers: campersReducer,
     filters: filtersReducer,
     favorites: persistReducer(persistListConfig, favoritesReducer),
+    modals: modalsReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

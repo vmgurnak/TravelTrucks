@@ -12,6 +12,7 @@ import { filters } from '../../redux/filters/slice';
 import css from './FilterForm.module.css';
 
 import { INITIAL_FORM_DATA } from '../Constants/constants';
+import { changeFiltersModal, changeModal } from '../../redux/modal/slice.js';
 
 const FilterFormSchema = Yup.object().shape({
   location: Yup.string().min(2, 'Location must be at least 2 characters!'),
@@ -176,7 +177,14 @@ const FilterForm = () => {
             </li>
           </ul>
 
-          <button type="submit" className={css.btnSearch}>
+          <button
+            type="submit"
+            className={css.btnSearch}
+            onClick={() => {
+              dispatch(changeModal(false));
+              dispatch(changeFiltersModal(false));
+            }}
+          >
             Search
           </button>
         </Form>
