@@ -1,6 +1,7 @@
 import Modal from 'react-modal';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import clsx from 'clsx';
 
 import FilterForm from '../FilterForm/FilterForm.jsx';
 import {
@@ -10,37 +11,39 @@ import {
 import { changeModal } from '../../redux/modal/slice.js';
 
 import css from './Modal.module.css';
+import { useEffect, useState } from 'react';
 
 const MainModal = () => {
+  const [beforeClose, setBeforeClose] = useState(false);
+  const [afterOpen, setAfterOpen] = useState(false);
   const dispatch = useDispatch();
   const modalFiltersIsOpen = useSelector(selectModalFiltersIsOpen);
   const modalIsOpen = useSelector(selectModalIsOpen);
 
-  const customStyles = {
-    overlay: {
-      zIndex: '1',
-      backgroundColor: 'rgba(46, 47, 66, 0.76)',
-    },
-    content: {
-      background: 'none',
-      inset: '20px 40px',
-      border: 'none',
-      outline: '10px',
-      padding: '0',
-    },
-  };
+  useEffect(() => {
+    if (!modalIsOpen) return;
+    setAfterOpen(true);
+  }, [modalIsOpen]);
+
   return (
     <Modal
       appElement={document.getElementById('root')}
       isOpen={modalIsOpen}
       // onAfterOpen={afterOpenModal}
-      onRequestClose={() => dispatch(changeModal(false))}
+      onRequestClose={() => {
+        setBeforeClose(!beforeClose);
+        setTimeout(() => {
+          dispatch(changeModal(false));
+        }, 500);
+      }}
       contentLabel="Modal"
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
-      style={customStyles}
-      // className={css.modal}
-      // overlayClassName={css.overlay}
+      className={clsx(css.modal)}
+      overlayClassName={clsx(css.modalOverlay, {
+        [css.afterOpen]: afterOpen,
+        [css.beforeClose]: beforeClose,
+      })}
     >
       {modalFiltersIsOpen ? <FilterForm /> : null}
     </Modal>
