@@ -1,6 +1,8 @@
 import Modal from 'react-modal';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useWindowSize } from 'react-use';
 import clsx from 'clsx';
 
 import FilterForm from '../FilterForm/FilterForm.jsx';
@@ -9,9 +11,9 @@ import {
   selectModalFiltersIsOpen,
 } from '../../redux/modal/selectors.js';
 import { changeModal } from '../../redux/modal/slice.js';
+import CloseButton from '../REUSABLE/CloseButton/CloseButton.jsx';
 
 import css from './Modal.module.css';
-import { useEffect, useState } from 'react';
 
 const MainModal = () => {
   const [beforeClose, setBeforeClose] = useState(false);
@@ -19,6 +21,7 @@ const MainModal = () => {
   const dispatch = useDispatch();
   const modalFiltersIsOpen = useSelector(selectModalFiltersIsOpen);
   const modalIsOpen = useSelector(selectModalIsOpen);
+  const { width } = useWindowSize();
 
   useEffect(() => {
     if (!modalIsOpen) return;
@@ -29,7 +32,6 @@ const MainModal = () => {
     <Modal
       appElement={document.getElementById('root')}
       isOpen={modalIsOpen}
-      // onAfterOpen={afterOpenModal}
       onRequestClose={() => {
         setBeforeClose(!beforeClose);
         setTimeout(() => {
@@ -45,7 +47,16 @@ const MainModal = () => {
         [css.beforeClose]: beforeClose,
       })}
     >
-      {modalFiltersIsOpen ? <FilterForm /> : null}
+      <CloseButton
+        onClose={() => {
+          setBeforeClose(!beforeClose);
+          setTimeout(() => {
+            dispatch(changeModal(false));
+          }, 500);
+        }}
+        addClass={css.closeBtnModal}
+      />
+      {modalFiltersIsOpen && width < 1440 ? <FilterForm /> : null}
     </Modal>
   );
 };

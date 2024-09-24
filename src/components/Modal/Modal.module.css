@@ -1,12 +1,16 @@
 .modal {
   position: relative;
-  max-width: 350px;
-  height: 90%;
+  width: 350px;
+  height: auto;
   margin: auto;
   padding: 40px 10px;
   outline: none;
   background-color: white;
   border-radius: 15px;
+
+  @media (min-width: 768px) {
+    width: 380px;
+  }
 }
 
 .modalOverlay {
@@ -42,4 +46,9 @@
   transform: scale(1.5);
   transition: opacity var(--transition-delay) var(--transition),
     transform var(--transition-delay) var(--transition);
+}
+
+.closeBtnModal {
+  top: 15px;
+  right: 15px;
 }

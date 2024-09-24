@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { useSelector } from 'react-redux';
+import { useWindowSize } from 'react-use';
 
 import Layout from './components/Layout/Layout';
 import Loader from './components/Loader/Loader';
@@ -18,6 +19,7 @@ const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 
 const App = () => {
   const modalIsOpen = useSelector(selectModalIsOpen);
+  const { width } = useWindowSize();
 
   return (
     <>
@@ -36,7 +38,7 @@ const App = () => {
           </Route>
         </Routes>
       </Suspense>
-      {modalIsOpen ? <MainModal /> : null}
+      {modalIsOpen && width < 1440 ? <MainModal /> : null}
     </>
   );
 };
