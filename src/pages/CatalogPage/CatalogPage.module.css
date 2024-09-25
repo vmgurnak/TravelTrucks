@@ -10,8 +10,6 @@
 
   padding: 10px;
 
-  pointer-events: none;
-
   @media (min-width: 768px) {
     gap: 20px;
     padding: 20px;
@@ -25,4 +23,8 @@
 
     padding: 48px 64px 52px 64px;
   }
+}
+
+.notScroll {
+  pointer-events: none;
 }
