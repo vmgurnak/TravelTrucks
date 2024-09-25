@@ -40,6 +40,7 @@
 .modalOverlay.afterOpen {
   opacity: 1;
   transform: scale(1);
+  /* pointer-events: none; */
 }
 
 .modalOverlay.beforeClose {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useWindowSize } from 'react-use';
 
 import clsx from 'clsx';
 import * as Yup from 'yup';
@@ -21,6 +22,7 @@ const FilterFormSchema = Yup.object().shape({
 const FilterForm = () => {
   const [isFocus, setIsFocus] = useState(false);
   const dispatch = useDispatch();
+  const { width } = useWindowSize();
 
   const handleFocus = () => {
     setIsFocus(true);
@@ -62,7 +64,7 @@ const FilterForm = () => {
               />
             </div>
           </label>
-          <p className={css.filterHeadline}>Filters</p>
+          {width >= 1440 && <p className={css.filterHeadline}>Filters</p>}
           <h3 className={css.filterTitle}>Vehicle equipment</h3>
           <ul className={clsx(css.filterWrapper, css.checkboxWrapper)}>
             <li className={css.filterItem}>
