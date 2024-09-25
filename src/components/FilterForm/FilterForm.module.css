@@ -4,12 +4,15 @@
 
   background-color: var(--white);
 
-  width: 330px;
+  max-width: 335px;
   height: auto;
 
   @media (min-width: 768px) {
-    width: 360px;
-    height: 752px;
+    max-width: 610px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 360px;
   }
 }
 
@@ -20,7 +23,7 @@
 
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     margin-bottom: 40px;
   }
 }
@@ -35,7 +38,7 @@
 }
 
 .inputLocation {
-  width: 330px;
+  width: 100%;
   padding: 16px 14px 16px 46px;
   border-radius: 12px;
   border: none;
@@ -44,10 +47,6 @@
   background-color: var(--light-grey);
   color: var(--main);
   line-height: 1.5;
-
-  @media (min-width: 768px) {
-    width: 360px;
-  }
 }
 
 .inputLocation::placeholder {
@@ -84,7 +83,7 @@
   font-size: 20px;
   line-height: 1.2;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     padding-bottom: 24px;
     margin-bottom: 24px;
   }
@@ -96,7 +95,7 @@
   flex-wrap: wrap;
   margin-bottom: 18px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     gap: 12px;
     margin-bottom: 22px;
   }
@@ -105,7 +104,7 @@
 .checkboxWrapper {
   margin-bottom: 18px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     margin-bottom: 22px;
   }
 }
@@ -124,7 +123,7 @@
   width: 90px;
   height: 70px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     width: 112px;
     height: 96px;
   }
@@ -147,7 +146,7 @@
   width: 24px;
   height: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     width: 32px;
     height: 32px;
   }
@@ -160,7 +159,7 @@
   letter-spacing: -0.01em;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     font-size: 16px;
   }
 }
