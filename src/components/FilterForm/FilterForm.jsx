@@ -34,6 +34,8 @@ const FilterForm = () => {
 
   const handleSubmit = (values, action) => {
     dispatch(filters(values));
+    dispatch(changeModal(false));
+    dispatch(changeFiltersModal(false));
     console.log(values);
     action.resetForm();
   };
@@ -179,14 +181,7 @@ const FilterForm = () => {
             </li>
           </ul>
 
-          <button
-            type="submit"
-            className={css.btnSearch}
-            onClick={() => {
-              dispatch(changeModal(false));
-              dispatch(changeFiltersModal(false));
-            }}
-          >
+          <button type="submit" className={css.btnSearch}>
             Search
           </button>
         </Form>

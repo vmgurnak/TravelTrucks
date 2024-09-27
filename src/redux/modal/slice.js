@@ -11,6 +11,7 @@ export const Modals = createSlice({
   reducers: {
     changeModal(state, action) {
       state.modalIsOpen = action.payload;
+      state.modalFiltersIsOpen = action.payload;
     },
     changeFiltersModal(state, action) {
       state.modalIsOpen = action.payload;

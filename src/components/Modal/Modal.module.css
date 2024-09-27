@@ -1,3 +1,7 @@
+.ReactModal__Overlay--before-close {
+  pointer-events: none;
+}
+
 .modal {
   position: relative;
   max-width: 355px;
@@ -6,8 +10,6 @@
   outline: none;
   background-color: white;
   border-radius: 15px;
-
-  /* overflow: auto; */
 
   @media (min-width: 768px) {
     max-width: 650px;

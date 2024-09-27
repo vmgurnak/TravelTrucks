@@ -38,7 +38,7 @@ const MainModal = () => {
           dispatch(changeModal(false));
         }, 500);
       }}
-      contentLabel="Modal"
+      // contentLabel="Modal"
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       className={clsx(css.modal)}
@@ -57,6 +57,7 @@ const MainModal = () => {
         addClass={css.closeBtnModal}
       />
       {modalFiltersIsOpen && width < 1440 ? <FilterForm /> : null}
+      {/* <FilterForm /> */}
     </Modal>
   );
 };
