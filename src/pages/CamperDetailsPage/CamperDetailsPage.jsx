@@ -58,7 +58,7 @@ const CamperDetailsPage = () => {
           <div className={css.camperInfo}>
             <h3 className={css.name}>{camper.name}</h3>
             <div className={css.ratingWrap}>
-              <SvgIcon addClass={css.star} icon={ICONS.star} />
+              <SvgIcon addClass={css.star} icon={ICONS.starPressed} />
               <p className={css.ratingReview}>
                 {camper.rating}({camper.reviews.length} Reviews)
               </p>

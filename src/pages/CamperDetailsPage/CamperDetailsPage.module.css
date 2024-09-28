@@ -2,7 +2,15 @@
   outline: 1px solid red;
   outline-offset: -2px;
 
-  padding: 48px 64px 80px 64px;
+  padding: 10px;
+
+  @media (min-width: 768px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 48px 64px 80px 64px;
+  }
 }
 
 .textError,
@@ -24,17 +32,36 @@
   outline: 1px solid red;
   outline-offset: -2px;
 
-  width: 1312px;
-  height: 528px;
-  margin-bottom: 60px;
+  max-width: 375px;
+  height: auto;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+    height: auto;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1312px;
+    height: 528px;
+    margin-bottom: 60px;
+  }
 }
 
 .name {
   margin-bottom: 8px;
 
   font-weight: 600;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.33;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+  }
 }
 
 .ratingWrap {
@@ -66,24 +93,56 @@
 }
 
 .price {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
+  margin-right: 12px;
 
   font-weight: 600;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.33;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
 }
 
 .camperGallery {
   display: flex;
-  gap: 48px;
-  margin-bottom: 28px;
+  gap: 15px;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 24px;
+    margin-bottom: 28px;
+  }
 }
 
 .galleryItem {
-  width: 292px;
-  height: 312px;
+  width: 100%;
+  height: 230px;
   border-radius: 10px;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    width: 290px;
+    height: 290px;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 1440px) {
+    width: 292px;
+    height: 312px;
+  }
 }
 
 .img {
@@ -133,9 +192,21 @@
 
   display: flex;
   gap: 40px;
+  flex-direction: column;
 
-  width: 1312px;
-  height: 588px;
+  max-width: 375px;
+  height: auto;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+
+    max-width: 1312px;
+    height: 588px;
+  }
 }
 
 .camperDetailsInfo {
