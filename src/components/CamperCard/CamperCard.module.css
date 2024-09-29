@@ -176,7 +176,7 @@
   background-color: var(--light);
 
   @media (min-width: 1440px) {
-    padding: 12px 24px;
+    padding: 12px 18px;
   }
 }
 
