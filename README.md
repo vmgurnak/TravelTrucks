@@ -1,8 +1,37 @@
-# React + Vite
+# Загальна інформація
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- TravelTrucks - веб-додаток для компанії "TravelTrucks", яка займається орендою
+  кемперів
 
-Currently, two official plugins are available:
+# Фреймворки та бібліотеки
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Бандлер Vite
+- React Redux для управління станом
+- React Router для маршрутизаці
+- Redux Persist для збереження в Local Storage
+- Бібліотека Axios для запитів
+- react-hot-toast для нотифікації
+- react-modal для модального вікна
+- formik для форм фільтрації та резервування
+
+# Сторінки та функціонал
+
+- Header з навігацією та мобільним меню для мобільних пристроїв
+- Home - Домашня сторінка з кнопкою для переходу на сторінку каталогу
+- Catalog - Сторінка каталогу з можливостью фільтрації, додавання/видалення з
+  обраного, пагінацією при натисканні на кнопку Load More для завантаження
+  наступних карток з кемперами
+- Favorites - Сторінка обраного з можливостью фільтрації, додавання/видалення з
+  обраного, пагінацією при натисканні на кнопку Load More для завантаження
+  наступних карток з кемперами
+- Сторінка з деталізацією та можливостью резервування
+
+# Верстка
+
+- Гумова верстка для мобільних пристроїв з екранами до 375px
+- Адаптована верстка для планшетів та ноутбуків
+
+# Жива сторінка
+
+- Проєкт задеплоєний на vercel.com
+- Посилання на живу сторінку https://travel-trucks-nu-three.vercel.app/
