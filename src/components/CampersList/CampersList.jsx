@@ -23,7 +23,6 @@ const CampersList = () => {
   const quantityCampers = filteredCampers.length;
 
   const showMore = () => setItems(items + 4);
-  console.log(filteredCampers);
 
   return (
     <div className={css.containerCampersList}>

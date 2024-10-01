@@ -35,7 +35,6 @@ const CamperBookForm = () => {
   const [startDate, setStartDate] = useState(null);
   const camper = useSelector(selectCamper);
   const handleSubmit = (values, action) => {
-    console.log(values);
     action.resetForm();
     setStartDate(null);
     toast.success('Your booking request has been successfully sent');

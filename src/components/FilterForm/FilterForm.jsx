@@ -36,7 +36,6 @@ const FilterForm = () => {
     dispatch(filters(values));
     dispatch(changeModal(false));
     dispatch(changeFiltersModal(false));
-    console.log(values);
     action.resetForm();
   };
 

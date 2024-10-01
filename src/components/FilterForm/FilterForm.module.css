@@ -1,7 +1,4 @@
 .filterForm {
-  outline: 1px solid red;
-  outline-offset: -2px;
-
   background-color: var(--white);
 
   max-width: 335px;

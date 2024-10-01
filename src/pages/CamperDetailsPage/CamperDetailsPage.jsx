@@ -38,8 +38,6 @@ const CamperDetailsPage = () => {
     dispatch(fetchCamperRequestID(camperID));
   }, [dispatch, camperID]);
 
-  console.log(camper);
-
   return (
     <section className={css.camperDetailsPage}>
       {isError && (
