@@ -1,7 +1,4 @@
 .favotitesPage {
-  outline: 1px solid red;
-  outline-offset: -2px;
-
   display: flex;
   gap: 10px;
   flex-direction: column;

@@ -1,7 +1,7 @@
 .homePage {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 90vh;
 
   padding: 100px 16px 160px 16px;
 
@@ -20,7 +20,6 @@
   }
 
   @media (min-width: 768px) {
-    display: block;
     padding: 90px 32px 90px 32px;
   }
 

@@ -55,10 +55,18 @@
   background-color: var(--light-grey);
   line-height: 1.5;
 
+  @media (min-width: 768px) {
+    width: 670.67px;
+  }
+
   @media (min-width: 1440px) {
     width: 527px;
     padding: 18px;
   }
+}
+
+.react-datepicker-wrapper {
+  display: block !important;
 }
 
 .label:nth-child(4) > .input {

@@ -1,7 +1,4 @@
 .wrapper {
-  outline: 1px solid red;
-  outline-offset: -2px;
-
   max-width: 375px;
   margin: 0 auto;
 
@@ -12,7 +9,4 @@
   @media (min-width: 1440px) {
     max-width: 1440px;
   }
-}
-
-.main {
 }

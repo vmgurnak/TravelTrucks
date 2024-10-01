@@ -1,7 +1,4 @@
 .camperDetailsPage {
-  outline: 1px solid red;
-  outline-offset: -2px;
-
   padding: 10px;
 
   @media (min-width: 768px) {
@@ -119,6 +116,7 @@
   @media (min-width: 768px) {
     gap: 20px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 1440px) {
@@ -134,8 +132,8 @@
   overflow: hidden;
 
   @media (min-width: 768px) {
-    width: 290px;
-    height: 290px;
+    width: calc((100% - 40px) / 3);
+    height: 230px;
     flex-shrink: 0;
   }
 

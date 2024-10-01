@@ -1,5 +1,5 @@
 {
-  "total": 13,
+  "total": 23,
   "items": [
     {
       "id": "1",
@@ -661,6 +661,476 @@
           "reviewer_name": "Bob",
           "reviewer_rating": 3,
           "comment": "A decent choice for a family trip. The El Monte Class B Small [B] provided a comfortable stay, but the absence of a TV might be a drawback for entertainment. Overall, a convenient option for a family road adventure."
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Vagabond Cruiser XL",
+      "price": 9000,
+      "rating": 4.4,
+      "location": "Ukraine, Lviv",
+      "description": "Explore with ease and style in the Vagabond Cruiser XL, a nimble yet spacious panel truck...",
+      "form": "panelTruck",
+      "length": "6.1m",
+      "width": "2.0m",
+      "height": "2.9m",
+      "tank": "110l",
+      "consumption": "13.2l/100km",
+      "transmission": "automatic",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": false,
+      "kitchen": true,
+      "TV": false,
+      "radio": true,
+      "refrigerator": false,
+      "microwave": true,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/1-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/1-2.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/1-3.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/1-3.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "A fantastic panel truck for weekend getaways!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "Comfortable, but could use a little more storage space."
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Nomad Cruiser",
+      "price": 9500,
+      "rating": 4.5,
+      "location": "Ukraine, Kharkiv",
+      "description": "Travel far and wide with the Nomad Cruiser, a versatile panel truck with modern amenities...",
+      "form": "panelTruck",
+      "length": "5.8m",
+      "width": "2.1m",
+      "height": "2.7m",
+      "tank": "115l",
+      "consumption": "12.8l/100km",
+      "transmission": "manual",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": false,
+      "kitchen": true,
+      "TV": false,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": false,
+      "gas": false,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/3-1.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/3-1.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/3-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/3-2.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "Great for family trips. The kitchen was especially useful!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "Overall, a good vehicle, though the bathroom could be better."
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Horizon Adventurer",
+      "price": 11000,
+      "rating": 4.6,
+      "location": "Ukraine, Kyiv",
+      "description": "Set out for the horizon in the Horizon Adventurer, a fully equipped panel truck with all the comforts of home...",
+      "form": "panelTruck",
+      "length": "6.3m",
+      "width": "2.2m",
+      "height": "3.0m",
+      "tank": "120l",
+      "consumption": "14.2l/100km",
+      "transmission": "automatic",
+      "engine": "petrol",
+      "AC": true,
+      "bathroom": false,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": true,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/4-1.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/4-1.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/4-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/4-2.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "The Horizon Adventurer was perfect for our trip!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "Comfortable, though the AC could be stronger."
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Pathfinder Voyager",
+      "price": 13000,
+      "rating": 4.6,
+      "location": "Ukraine, Dnipro",
+      "description": "The Pathfinder Voyager is ideal for those looking to explore new horizons in comfort...",
+      "form": "fullyIntegrated",
+      "length": "7.8m",
+      "width": "2.5m",
+      "height": "3.7m",
+      "tank": "210l",
+      "consumption": "30l/100km",
+      "transmission": "manual",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": true,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": true,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/2-1.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/2-1.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/2-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/2-2.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "Fantastic motorhome! It had everything we needed for our long road trip."
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 3,
+          "comment": "Good vehicle, but the bathroom space felt cramped."
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Journey Escape",
+      "price": 9000,
+      "rating": 4.5,
+      "location": "Ukraine, Odesa",
+      "description": "Take a journey you'll never forget with the Journey Escape, a comfortable and efficient panel truck...",
+      "form": "panelTruck",
+      "length": "5.9m",
+      "width": "2.1m",
+      "height": "2.6m",
+      "tank": "118l",
+      "consumption": "13.5l/100km",
+      "transmission": "automatic",
+      "engine": "petrol",
+      "AC": true,
+      "bathroom": false,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": false,
+      "microwave": true,
+      "gas": false,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/5-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/5-2.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/5-3.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/5-3.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "The perfect camper for a family road trip!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "Comfortable, but a bit small for longer journeys."
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Sunset Voyager",
+      "price": 8500,
+      "rating": 4.3,
+      "location": "Ukraine, Kharkiv",
+      "description": "The Sunset Voyager is perfect for those who want to enjoy a relaxing journey...",
+      "form": "fullyIntegrated",
+      "length": "7.1m",
+      "width": "2.5m",
+      "height": "3.5m",
+      "tank": "200l",
+      "consumption": "28l/100km",
+      "transmission": "automatic",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": true,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": false,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/3-1.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/3-1.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/3-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/3-2.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "Ideal camper for a smooth trip across the countryside."
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "A great option, but could use a better entertainment system."
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Star Trail Camper",
+      "price": 9500,
+      "rating": 4.5,
+      "location": "Ukraine, Odesa",
+      "description": "The Star Trail Camper is designed for adventurers who want to explore in comfort...",
+      "form": "panelTruck",
+      "length": "6.2m",
+      "width": "2.0m",
+      "height": "2.8m",
+      "tank": "125l",
+      "consumption": "14l/100km",
+      "transmission": "manual",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": true,
+      "kitchen": true,
+      "TV": false,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": true,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/5-1.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/5-1.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/5-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/5-2.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "Great camper for stargazing trips!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 3,
+          "comment": "Overall good, but felt a bit small for longer trips."
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Freedom Cruiser",
+      "price": 10000,
+      "rating": 4.4,
+      "location": "Ukraine, Lviv",
+      "description": "Enjoy the freedom of the road with the Freedom Cruiser...",
+      "form": "panelTruck",
+      "length": "6.5m",
+      "width": "2.1m",
+      "height": "2.9m",
+      "tank": "140l",
+      "consumption": "15l/100km",
+      "transmission": "automatic",
+      "engine": "petrol",
+      "AC": true,
+      "bathroom": false,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": false,
+      "gas": false,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/6-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/6-2.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/6-3.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/6-3.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "Loved the layout of this camper, perfect for a family!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "Good vehicle, but could use more power outlets."
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Wild Explorer",
+      "price": 8500,
+      "rating": 4.4,
+      "location": "Ukraine, Kyiv",
+      "description": "Take on the wild with the Wild Explorer camper...",
+      "form": "fullyIntegrated",
+      "length": "7.2m",
+      "width": "2.4m",
+      "height": "3.6m",
+      "tank": "190l",
+      "consumption": "28l/100km",
+      "transmission": "automatic",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": true,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": true,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/2-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/2-2.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/2-3.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/2-3.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "A fantastic choice for longer trips in nature."
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 4,
+          "comment": "Great vehicle, but I wish the fuel consumption was a bit better."
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Skyline Traveler",
+      "price": 13000,
+      "rating": 4.5,
+      "location": "Ukraine, Dnipro",
+      "description": "The Skyline Traveler offers a luxurious experience...",
+      "form": "fullyIntegrated",
+      "length": "8.0m",
+      "width": "2.6m",
+      "height": "3.9m",
+      "tank": "220l",
+      "consumption": "35l/100km",
+      "transmission": "automatic",
+      "engine": "diesel",
+      "AC": true,
+      "bathroom": true,
+      "kitchen": true,
+      "TV": true,
+      "radio": true,
+      "refrigerator": true,
+      "microwave": true,
+      "gas": true,
+      "water": true,
+      "gallery": [
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/7-2.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/7-2.webp"
+        },
+        {
+          "thumb": "https://ftp.goit.study/img/campers-test-task/7-3.webp",
+          "original": "https://ftp.goit.study/img/campers-test-task/7-3.webp"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewer_name": "Alice",
+          "reviewer_rating": 5,
+          "comment": "One of the best campers we've ever used!"
+        },
+        {
+          "reviewer_name": "Bob",
+          "reviewer_rating": 3,
+          "comment": "Good for short trips, but fuel consumption is high."
         }
       ]
     }
