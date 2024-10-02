@@ -16,6 +16,7 @@ import { ICONS } from '../../components/Constants/constants';
 
 import css from './CamperDetailsPage.module.css';
 import CamperBookForm from '../../components/CamperBookForm/CamperBookForm';
+import ScrollToTop from '../../utils/ScrollToTop.js';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx([css.link], isActive && css.active);
@@ -33,6 +34,7 @@ const CamperDetailsPage = () => {
   const camper = useSelector(selectCamper);
   const isError = useSelector(selectError);
   const isLoading = useSelector(selectLoading);
+  ScrollToTop();
 
   useEffect(() => {
     dispatch(fetchCamperRequestID(camperID));
