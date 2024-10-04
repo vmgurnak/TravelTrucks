@@ -2,21 +2,21 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Route, Routes, useParams } from 'react-router-dom';
 import { fetchCamperRequestID } from '../../redux/campers/operations';
+import clsx from 'clsx';
 
 import CamperFeatures from '../../components/CamperFeatures/CamperFeatures';
 import CamperReviews from '../../components/CamperReviews/CamperReviews';
+import CamperBookForm from '../../components/CamperBookForm/CamperBookForm';
+import { SvgIcon } from '../../components/REUSABLE/SvgIcon/SvgIcon';
 import {
   selectCamper,
   selectError,
   selectLoading,
 } from '../../redux/campers/selectors';
-import clsx from 'clsx';
-import { SvgIcon } from '../../components/REUSABLE/SvgIcon/SvgIcon';
 import { ICONS } from '../../components/Constants/constants';
+import ScrollToTop from '../../utils/ScrollToTop.js';
 
 import css from './CamperDetailsPage.module.css';
-import CamperBookForm from '../../components/CamperBookForm/CamperBookForm';
-import ScrollToTop from '../../utils/ScrollToTop.js';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx([css.link], isActive && css.active);
@@ -34,6 +34,7 @@ const CamperDetailsPage = () => {
   const camper = useSelector(selectCamper);
   const isError = useSelector(selectError);
   const isLoading = useSelector(selectLoading);
+
   ScrollToTop();
 
   useEffect(() => {

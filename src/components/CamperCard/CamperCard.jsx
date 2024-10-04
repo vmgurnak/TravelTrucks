@@ -44,7 +44,6 @@ const CamperCard = ({ camper }) => {
             ) : (
               <SvgIcon addClass={css.favorite} icon={ICONS.heart} />
             )}
-            {/* <SvgIcon addClass={css.favorite} icon={ICONS.heart} /> */}
           </button>
         </div>
         <div className={css.ratingWrap}>
@@ -107,33 +106,3 @@ const CamperCard = ({ camper }) => {
 };
 
 export default CamperCard;
-
-// Для опиcу деталей використовуй наступні властивості:
-// "form": "alcove", Fully Integrated, Van
-// "length": "7.3m",
-// "width": "2.65m",
-// "height": "3.65m",
-// "tank": "208l",
-// "consumption": "30l/100km",
-
-// "refrigerator": true,false
-// "radio": true,false
-// "microwave": true,false
-// "gas": true,false
-// "water": true,false
-
-// Filters
-// "location": "Ukraine, Kyiv",
-
-// Vehicle equipment
-// "AC": true,false
-// "transmission": "automatic", "manual",
-// "kitchen": true,false
-// "TV": true,false
-// "bathroom": true,false
-
-// "engine": "diesel", "petrol", "hybrid"
-
-// Vehicle type
-// "form": "alcove", Fully Integrated, Van
-// "form": alcove, fullyIntegrated, 'panelTruck'
