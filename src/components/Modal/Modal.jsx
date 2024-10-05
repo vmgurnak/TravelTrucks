@@ -9,31 +9,33 @@ import FilterForm from '../FilterForm/FilterForm.jsx';
 import {
   selectModalIsOpen,
   selectModalFiltersIsOpen,
+  selectBeforeClose,
 } from '../../redux/modal/selectors.js';
-import { changeModal } from '../../redux/modal/slice.js';
+import { changeModal, changeBeforeClose } from '../../redux/modal/slice.js';
 import CloseButton from '../REUSABLE/CloseButton/CloseButton.jsx';
 
 import css from './Modal.module.css';
 
 const MainModal = () => {
-  const [beforeClose, setBeforeClose] = useState(false);
   const [afterOpen, setAfterOpen] = useState(false);
   const dispatch = useDispatch();
   const modalFiltersIsOpen = useSelector(selectModalFiltersIsOpen);
   const modalIsOpen = useSelector(selectModalIsOpen);
+  const beforeClose = useSelector(selectBeforeClose);
   const { width } = useWindowSize();
 
   useEffect(() => {
     if (!modalIsOpen) return;
+    // dispatch(changeAfterOpen(true));
     setAfterOpen(true);
-  }, [modalIsOpen]);
+  }, [modalIsOpen, dispatch]);
 
   return (
     <Modal
       appElement={document.getElementById('root')}
       isOpen={modalIsOpen}
       onRequestClose={() => {
-        setBeforeClose(!beforeClose);
+        dispatch(changeBeforeClose(true));
         setTimeout(() => {
           dispatch(changeModal(false));
         }, 500);
@@ -49,7 +51,7 @@ const MainModal = () => {
     >
       <CloseButton
         onClose={() => {
-          setBeforeClose(!beforeClose);
+          dispatch(changeBeforeClose(true));
           setTimeout(() => {
             dispatch(changeModal(false));
           }, 500);

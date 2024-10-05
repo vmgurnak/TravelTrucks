@@ -3,6 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const INITIAL_STATE = {
   modalIsOpen: false,
   modalFiltersIsOpen: false,
+  beforeClose: false,
+  afterOpen: false,
 };
 
 export const Modals = createSlice({
@@ -17,8 +19,19 @@ export const Modals = createSlice({
       state.modalIsOpen = action.payload;
       state.modalFiltersIsOpen = action.payload;
     },
+    changeBeforeClose(state, action) {
+      state.beforeClose = action.payload;
+    },
+    changeAfterOpen(state, action) {
+      state.afterOpen = action.payload;
+    },
   },
 });
 
-export const { changeModal, changeFiltersModal } = Modals.actions;
+export const {
+  changeModal,
+  changeFiltersModal,
+  changeBeforeClose,
+  changeAfterOpen,
+} = Modals.actions;
 export const modalsReducer = Modals.reducer;

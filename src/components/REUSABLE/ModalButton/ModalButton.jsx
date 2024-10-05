@@ -2,7 +2,10 @@ import { useDispatch } from 'react-redux';
 
 import { ICONS } from '../../Constants/constants';
 import { SvgIcon } from '../../REUSABLE/SvgIcon/SvgIcon';
-import { changeFiltersModal } from '../../../redux/modal/slice';
+import {
+  changeFiltersModal,
+  changeBeforeClose,
+} from '../../../redux/modal/slice';
 
 import css from './ModalButton.module.css';
 
@@ -14,6 +17,7 @@ const ModalButton = () => {
       className={css.btn}
       onClick={() => {
         dispatch(changeFiltersModal(true));
+        dispatch(changeBeforeClose(false));
       }}
     >
       <SvgIcon addClass={css.icon} icon={ICONS.formFullyIntegrated} />

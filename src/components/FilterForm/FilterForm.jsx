@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useWindowSize } from 'react-use';
 
 import clsx from 'clsx';
@@ -13,7 +13,11 @@ import { filters } from '../../redux/filters/slice';
 import css from './FilterForm.module.css';
 
 import { INITIAL_FORM_DATA } from '../Constants/constants';
-import { changeFiltersModal } from '../../redux/modal/slice.js';
+import {
+  changeFiltersModal,
+  changeBeforeClose,
+} from '../../redux/modal/slice.js';
+import { selectBeforeClose } from '../../redux/modal/selectors.js';
 
 const FilterFormSchema = Yup.object().shape({
   location: Yup.string().min(2, 'Location must be at least 2 characters!'),
@@ -23,7 +27,6 @@ const FilterForm = () => {
   const [isFocus, setIsFocus] = useState(false);
   const dispatch = useDispatch();
   const { width } = useWindowSize();
-  const [beforeClose, setBeforeClose] = useState(false);
 
   const handleFocus = () => {
     setIsFocus(true);
@@ -35,11 +38,10 @@ const FilterForm = () => {
 
   const handleSubmit = (values, action) => {
     dispatch(filters(values));
-    setBeforeClose(!beforeClose);
-    // setTimeout(() => {
-    //   dispatch(changeFiltersModal(false));
-    // }, 500);
-    dispatch(changeFiltersModal(false));
+    dispatch(changeBeforeClose(true));
+    setTimeout(() => {
+      dispatch(changeFiltersModal(false));
+    }, 500);
     action.resetForm();
   };
 
