@@ -85,9 +85,10 @@ const CamperBookForm = () => {
               <DatePicker
                 className={css.input}
                 selected={startDate}
-                onChange={date => {
+                onChange={(date, event) => {
                   setStartDate(date);
                   setFieldValue('bookingDate', date);
+                  event.preventDefault();
                 }}
                 minDate={new Date()}
                 toggleCalendarOnIconClick
