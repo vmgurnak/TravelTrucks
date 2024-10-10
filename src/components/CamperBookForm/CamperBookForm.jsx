@@ -58,7 +58,7 @@ const CamperBookForm = () => {
         validationSchema={BookFormShema}
       >
         {({ setFieldValue }) => (
-          <Form autoComplete="on">
+          <Form noValidate autoComplete="on">
             <label className={css.label}>
               <Field
                 className={css.input}
@@ -91,7 +91,8 @@ const CamperBookForm = () => {
                 }}
                 minDate={new Date()}
                 toggleCalendarOnIconClick
-                shouldCloseOnSelect={false}
+                closeOnScroll={true}
+                shouldCloseOnSelect={true}
                 placeholderText="Booking date*"
                 dateFormat="dd.MM.yyyy"
                 onFocus={() => setStartDate(startDate)}
