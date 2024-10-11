@@ -10,6 +10,7 @@ import { INITIAL_FORM_DATA } from '../../components/Constants/constants';
 
 import css from './FavoritesPage.module.css';
 import ModalButton from '../../components/REUSABLE/ModalButton/ModalButton.jsx';
+import DocumentTitle from '../../components/REUSABLE/DocumentTitle.jsx';
 
 const FavotitesPage = () => {
   const { width } = useWindowSize();
@@ -20,19 +21,22 @@ const FavotitesPage = () => {
   }, [dispatch]);
 
   return (
-    <section className={css.favotitesPage}>
-      {width < 1440 ? (
-        <>
-          <ModalButton />
-          <FavoritesList />
-        </>
-      ) : (
-        <>
-          <FilterForm />
-          <FavoritesList />
-        </>
-      )}
-    </section>
+    <>
+      <DocumentTitle>FavotitesPage</DocumentTitle>
+      <section className={css.favotitesPage}>
+        {width < 1440 ? (
+          <>
+            <ModalButton />
+            <FavoritesList />
+          </>
+        ) : (
+          <>
+            <FilterForm />
+            <FavoritesList />
+          </>
+        )}
+      </section>
+    </>
   );
 };
 

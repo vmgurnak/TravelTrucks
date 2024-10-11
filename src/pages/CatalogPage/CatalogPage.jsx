@@ -9,6 +9,7 @@ import { fetchCampersRequest } from '../../redux/campers/operations';
 import { filters } from '../../redux/filters/slice';
 import { INITIAL_FORM_DATA } from '../../components/Constants/constants';
 import ModalButton from '../../components/REUSABLE/ModalButton/ModalButton';
+import DocumentTitle from '../../components/REUSABLE/DocumentTitle.jsx';
 
 import css from './CatalogPage.module.css';
 
@@ -22,19 +23,22 @@ const CatalogPage = () => {
   }, [dispatch]);
 
   return (
-    <section className={css.catalogPage}>
-      {width < 1440 ? (
-        <>
-          <ModalButton />
-          <CampersList />
-        </>
-      ) : (
-        <>
-          <FilterForm />
-          <CampersList />
-        </>
-      )}
-    </section>
+    <>
+      <DocumentTitle>CatalogPage</DocumentTitle>
+      <section className={css.catalogPage}>
+        {width < 1440 ? (
+          <>
+            <ModalButton />
+            <CampersList />
+          </>
+        ) : (
+          <>
+            <FilterForm />
+            <CampersList />
+          </>
+        )}
+      </section>
+    </>
   );
 };
 
