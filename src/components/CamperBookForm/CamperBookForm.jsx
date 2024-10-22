@@ -92,7 +92,7 @@ const CamperBookForm = () => {
                 }}
                 minDate={new Date()}
                 toggleCalendarOnIconClick
-                closeOnScroll={true}
+                // closeOnScroll={true}
                 shouldCloseOnSelect={true}
                 placeholderText="Booking date*"
                 dateFormat="dd.MM.yyyy"

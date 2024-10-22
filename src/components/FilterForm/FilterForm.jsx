@@ -17,7 +17,6 @@ import {
   changeFiltersModal,
   changeBeforeClose,
 } from '../../redux/modal/slice.js';
-import { selectBeforeClose } from '../../redux/modal/selectors.js';
 
 const FilterFormSchema = Yup.object().shape({
   location: Yup.string().min(2, 'Location must be at least 2 characters!'),

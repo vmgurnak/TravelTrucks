@@ -17,7 +17,6 @@ const FavoritesList = () => {
   const quantityCampers = favoritesCampers.length;
 
   const showMore = () => setItems(items + 4);
-  console.log(favoritesCampers);
 
   return (
     <div className={css.containerFavoritesList}>
