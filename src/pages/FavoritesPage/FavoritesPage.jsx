@@ -22,7 +22,7 @@ const FavotitesPage = () => {
 
   return (
     <>
-      <DocumentTitle>FavotitesPage</DocumentTitle>
+      <DocumentTitle>TravelTrucks - Favotites</DocumentTitle>
       <section className={css.favotitesPage}>
         {width < 1440 ? (
           <>

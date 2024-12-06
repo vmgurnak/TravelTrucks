@@ -6,7 +6,7 @@ import css from './HomePage.module.css';
 const HomePage = () => {
   return (
     <>
-      <DocumentTitle>HomePage</DocumentTitle>
+      <DocumentTitle>TravelTrucks</DocumentTitle>
       <section className={css.homePage}>
         <h1 className={css.title}>Campers of your dreams</h1>
         <p className={css.text}>

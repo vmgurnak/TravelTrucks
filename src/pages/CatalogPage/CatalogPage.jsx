@@ -24,7 +24,7 @@ const CatalogPage = () => {
 
   return (
     <>
-      <DocumentTitle>CatalogPage</DocumentTitle>
+      <DocumentTitle>TravelTrucks - Catalog</DocumentTitle>
       <section className={css.catalogPage}>
         {width < 1440 ? (
           <>

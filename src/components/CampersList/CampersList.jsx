@@ -17,7 +17,6 @@ const CampersList = () => {
   const scrollRef = useRef();
   const heightItem =
     scrollRef.current && scrollRef.current.getBoundingClientRect().height;
-  console.log(heightItem);
 
   const isError = useSelector(selectError);
   const isLoading = useSelector(selectLoading);
@@ -27,11 +26,13 @@ const CampersList = () => {
   const quantityCampers = filteredCampers.length;
 
   useEffect(() => {
-    window.scrollBy({
-      top: items > 4 ? (heightItem + 20) * 2 : 0,
-      left: 0,
-      behavior: 'smooth',
-    });
+    setTimeout(() => {
+      window.scrollBy({
+        top: items > 4 ? (heightItem + 20) * 2 : 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }, 300);
   }, [items, heightItem]);
 
   const showMore = () => {

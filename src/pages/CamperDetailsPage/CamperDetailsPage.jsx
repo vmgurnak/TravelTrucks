@@ -44,7 +44,7 @@ const CamperDetailsPage = () => {
 
   return (
     <>
-      <DocumentTitle>CamperDetailsPage</DocumentTitle>
+      <DocumentTitle>TravelTrucks - {camper.name}</DocumentTitle>
       <section className={css.camperDetailsPage}>
         {isError && (
           <p className={css.textError}>
