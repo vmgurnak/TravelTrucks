@@ -44,7 +44,6 @@ const CamperDetailsPage = () => {
 
   return (
     <>
-      <DocumentTitle>TravelTrucks - {camper.name}</DocumentTitle>
       <section className={css.camperDetailsPage}>
         {isError && (
           <p className={css.textError}>
@@ -59,6 +58,7 @@ const CamperDetailsPage = () => {
         {isLoading && <p className={css.textLoading}>Loading...</p>}
         {camper && (
           <>
+            <DocumentTitle>TravelTrucks - {camper.name}</DocumentTitle>
             <div className={css.camperInfo}>
               <h3 className={css.name}>{camper.name}</h3>
               <div className={css.ratingWrap}>
